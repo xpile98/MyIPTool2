@@ -64,12 +64,6 @@ public:
 	bool m_bGetROIStart;
 	CRect m_roi;
 
-
-
-
-
-
-
 	afx_msg void OnUpdateGetroi(CCmdUI *pCmdUI);
 };
 

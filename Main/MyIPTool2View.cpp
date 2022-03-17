@@ -106,11 +106,11 @@ void CMyIPTool2View::OnDraw(CDC* pDC)
 
 	//get roi
 	if (m_bGetROI && m_bGetROIStart) {
-		CPen red_pen(PS_SOLID, 2, RGB(255, 0, 0));
+		CPen red_pen(PS_SOLID, 2, RGB(255, 255, 0));
 		pDC->SelectStockObject(NULL_BRUSH);
 		pDC->SelectObject(&red_pen);
 		CPoint asd = GetScrollPosition();
-		m_roi += GetScrollPosition();
+		// 임사 m_roi += GetScrollPosition();
 		pDC->Rectangle(m_roi);
 		red_pen.DeleteObject();
 	}
@@ -249,7 +249,7 @@ void CMyIPTool2View::OnMouseMove(UINT nFlags, CPoint point)
 	int y = pt.y;
 
 	CString message;
-	if (point.x >= 0 && point.y >= 0 && point.x < w && point.y < h) {
+	if (pt.x >= 0 && pt.y >= 0 && pt.x < w && pt.y < h) {
 		switch (channel) {
 		case 1:
 			if (depth == CV_8U)
@@ -273,19 +273,19 @@ void CMyIPTool2View::OnMouseMove(UINT nFlags, CPoint point)
 
 	//LineProfile
 	if (m_bLineProfile && m_bLineProfileStart) {
-		m_End = point;
+		m_End = pt;
 		Invalidate(FALSE);
 	}
 
 
 	//GetROI
 	if (m_bGetROI && m_bGetROIStart) {
-		m_roi.right = point.x;
-		m_roi.bottom = point.y;
+		m_roi.right = pt.x;
+		m_roi.bottom = pt.y;
 		Invalidate(FALSE);
 	}
 
-	CScrollView::OnMouseMove(nFlags, point);
+	CScrollView::OnMouseMove(nFlags, pt);
 }
 
 
@@ -324,10 +324,11 @@ void CMyIPTool2View::OnGetroi()
 
 void CMyIPTool2View::OnLButtonDown(UINT nFlags, CPoint point)
 {
-// 	// TODO: 여기에 메시지 처리기 코드를 추가 및/또는 기본값을 호출합니다.
+	// TODO: 여기에 메시지 처리기 코드를 추가 및/또는 기본값을 호출합니다.
+	CPoint pt = point + GetScrollPosition();
 	if (m_bLineProfile) {
 		m_bLineProfileStart = true;
-		m_Start = point;
+		m_Start = pt;
 	}
 
 
@@ -335,8 +336,8 @@ void CMyIPTool2View::OnLButtonDown(UINT nFlags, CPoint point)
 	if (m_bGetROI) {		//GetROI모드일때만 실행 
 
 		m_bGetROIStart = true;
-		m_roi.left = point.x;
-		m_roi.top = point.y;
+		m_roi.left = pt.x;
+		m_roi.top = pt.y;
 	}
 	CScrollView::OnLButtonDown(nFlags, point);
 }
@@ -345,6 +346,7 @@ void CMyIPTool2View::OnLButtonDown(UINT nFlags, CPoint point)
 void CMyIPTool2View::OnLButtonUp(UINT nFlags, CPoint point)
 {
 	// TODO: 여기에 메시지 처리기 코드를 추가 및/또는 기본값을 호출합니다.
+	CPoint pt = point + GetScrollPosition();
 	if (m_bLineProfile) {
 		m_bLineProfile = false;
 		m_bLineProfileStart = false;
@@ -355,8 +357,8 @@ void CMyIPTool2View::OnLButtonUp(UINT nFlags, CPoint point)
 		m_bGetROI = false;
 		m_bGetROIStart = false;
 
-		CPoint TRpt = m_roi.TopLeft() + GetScrollPosition();
-		CPoint BRpt = point + GetScrollPosition();
+		CPoint TRpt = m_roi.TopLeft();
+		CPoint BRpt = m_roi.BottomRight();
 		CRect rect(TRpt,BRpt);
 		if (rect.bottom < rect.top) {
 			rect.top = m_roi.bottom;

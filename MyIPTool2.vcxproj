@@ -121,7 +121,7 @@
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>_WINDOWS;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <SDLCheck>false</SDLCheck>
-      <AdditionalIncludeDirectories>.\Main;.\Dialog;.\MyFiles;.\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir);$(ProjectDir)Main;$(ProjectDir)Dialog;$(ProjectDir)MyFiles;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -173,7 +173,7 @@
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <PreprocessorDefinitions>_WINDOWS;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <SDLCheck>false</SDLCheck>
-      <AdditionalIncludeDirectories>.\Main;.\Dialog;.\MyFiles;.\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir);$(ProjectDir)Main;$(ProjectDir)Dialog;$(ProjectDir)MyFiles;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -229,10 +229,10 @@
     <ClInclude Include="Dialog\NoiseDlg.h" />
     <ClInclude Include="MyFiles\MyIPEdge.h" />
     <ClInclude Include="MyFiles\MyIPMorphology.h" />
-    <ClInclude Include="MyIPFreqFilter.h" />
-    <ClInclude Include="MyIPGeometry.h" />
-    <ClInclude Include="MyIPObjectDetection.h" />
-    <ClInclude Include="PatternMatchingDlg.h" />
+    <ClInclude Include="MyFiles\MyIPFreqFilter.h" />
+    <ClInclude Include="MyFiles\MyIPGeometry.h" />
+    <ClInclude Include="MyFiles\MyIPObjectDetection.h" />
+    <ClInclude Include="Dialog\PatternMatchingDlg.h" />
     <ClInclude Include="resource.h" />
     <ClInclude Include="MyFiles\RGBBYTE.h" />
     <ClInclude Include="MyFiles\RGBWORD.h" />
@@ -240,10 +240,10 @@
     <ClInclude Include="Dialog\SpetialFilterDlg.h" />
     <ClInclude Include="Dialog\ShapeningFilterDlg.h" />
     <ClInclude Include="MyFiles\ShapeElement.h" />
-    <ClInclude Include="TranslationDlg.h" />
+    <ClInclude Include="Dialog\TranslationDlg.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="ContourThresoldDlg.cpp" />
+    <ClCompile Include="Dialog\ContourThresoldDlg.cpp" />
     <ClCompile Include="Dialog\ArithmeticLogicalDlg.cpp" />
     <ClCompile Include="Dialog\ColorCombineDlg.cpp" />
     <ClCompile Include="Dialog\CVThresholdDlg.cpp" />
@@ -251,16 +251,16 @@
     <ClCompile Include="Dialog\HistogramDlg.cpp" />
     <ClCompile Include="Dialog\EdgeDetectorDlg.cpp" />
     <ClCompile Include="Dialog\LineProfileDlg.cpp" />
-    <ClCompile Include="FrequencyFilterDlg.cpp" />
-    <ClCompile Include="HoughLineDlg.cpp" />
-    <ClCompile Include="Logger.cpp" />
+    <ClCompile Include="Dialog\FrequencyFilterDlg.cpp" />
+    <ClCompile Include="Dialog\HoughLineDlg.cpp" />
+    <ClCompile Include="MyFiles\Logger.cpp" />
     <ClCompile Include="Main\ChildFrm.cpp" />
     <ClCompile Include="Dialog\GammaDlg.cpp" />
     <ClCompile Include="Main\MainFrm.cpp" />
     <ClCompile Include="Dialog\MorphologyDlg.cpp" />
     <ClCompile Include="Dialog\MorphAlgorithmDlg.cpp" />
-    <ClCompile Include="LoopDlg.cpp" />
-    <ClCompile Include="MyCSVFile.cpp" />
+    <ClCompile Include="Dialog\LoopDlg.cpp" />
+    <ClCompile Include="MyFiles\MyCSVFile.cpp" />
     <ClCompile Include="MyFiles\MyFunction.cpp" />
     <ClCompile Include="MyFiles\MyIPConvert.cpp" />
     <ClCompile Include="MyFiles\MyIPImage.cpp">
@@ -289,11 +289,11 @@
     <ClCompile Include="Dialog\ShapeningFilterDlg.cpp" />
     <ClCompile Include="MyFiles\MyIPMorphology.cpp" />
     <ClCompile Include="MyFiles\ShapeElement.cpp" />
-    <ClCompile Include="MyIPFreqFilter.cpp" />
-    <ClCompile Include="MyIPGeometry.cpp" />
-    <ClCompile Include="MyIPObjectDetection.cpp" />
-    <ClCompile Include="PatternMatchingDlg.cpp" />
-    <ClCompile Include="TranslationDlg.cpp" />
+    <ClCompile Include="MyFiles\MyIPFreqFilter.cpp" />
+    <ClCompile Include="MyFiles\MyIPGeometry.cpp" />
+    <ClCompile Include="MyFiles\MyIPObjectDetection.cpp" />
+    <ClCompile Include="Dialog\PatternMatchingDlg.cpp" />
+    <ClCompile Include="Dialog\TranslationDlg.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="MyIPTool2.reg" />
