@@ -1,0 +1,322 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{87A8C402-327D-4CBD-99B4-40A01D4AB474}</ProjectGuid>
+    <RootNamespace>MyIPTool2</RootNamespace>
+    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
+    <Keyword>MFCProj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+    <UseOfMfc>Dynamic</UseOfMfc>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+    <UseOfMfc>Dynamic</UseOfMfc>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+    <UseOfMfc>Dynamic</UseOfMfc>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+    <UseOfMfc>Dynamic</UseOfMfc>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>C:\opencv\build\include;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\opencv\build\x64\vc14\lib;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>C:\opencv\build\include;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\opencv\build\x64\vc14\bin;C:\opencv\build\x64\vc14\lib;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+    <IncludePath>C:\opencv\build\include;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\opencv\build\x64\vc14\bin;C:\opencv\build\x64\vc14\lib;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <AdditionalDependencies>opencv_world400d.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <Midl>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+      <ValidateAllParameters>true</ValidateAllParameters>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x0412</Culture>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>_WINDOWS;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>false</SDLCheck>
+      <AdditionalIncludeDirectories>.\Main;.\Dialog;.\MyFiles;.\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <AdditionalDependencies>opencv_world400d.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <Midl>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+      <ValidateAllParameters>true</ValidateAllParameters>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x0412</Culture>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+    <Midl>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+      <ValidateAllParameters>true</ValidateAllParameters>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x0412</Culture>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>_WINDOWS;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>false</SDLCheck>
+      <AdditionalIncludeDirectories>.\Main;.\Dialog;.\MyFiles;.\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>opencv_world400.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <Midl>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+      <ValidateAllParameters>true</ValidateAllParameters>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x0412</Culture>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <Text Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="ContourThresoldDlg.h" />
+    <ClInclude Include="Dialog\ArithmeticLogicalDlg.h" />
+    <ClInclude Include="Dialog\ColorCombineDlg.h" />
+    <ClInclude Include="Dialog\CVThresholdDlg.h" />
+    <ClInclude Include="Dialog\BrightnessContrastDlg.h" />
+    <ClInclude Include="Dialog\HistogramDlg.h" />
+    <ClInclude Include="Dialog\EdgeDetectorDlg.h" />
+    <ClInclude Include="Dialog\LineProfileDlg.h" />
+    <ClInclude Include="FrequencyFilterDlg.h" />
+    <ClInclude Include="HoughLineDlg.h" />
+    <ClInclude Include="Logger.h" />
+    <ClInclude Include="Main\ChildFrm.h" />
+    <ClInclude Include="Dialog\GammaDlg.h" />
+    <ClInclude Include="Main\MainFrm.h" />
+    <ClInclude Include="Dialog\MorphologyDlg.h" />
+    <ClInclude Include="Dialog\MorphAlgorithmDlg.h" />
+    <ClInclude Include="LoopDlg.h" />
+    <ClInclude Include="MyCSVFile.h" />
+    <ClInclude Include="MyFiles\MyFunction.h" />
+    <ClInclude Include="MyFiles\MyIPConvert.h" />
+    <ClInclude Include="MyFiles\MyIPImage.h" />
+    <ClInclude Include="MyFiles\MyIPEnhance.h" />
+    <ClInclude Include="Main\MyIPTool2.h" />
+    <ClInclude Include="Main\MyIPTool2Doc.h" />
+    <ClInclude Include="Main\MyIPTool2View.h" />
+    <ClInclude Include="Main\OutputWnd.h" />
+    <ClInclude Include="Main\stdafx.h" />
+    <ClInclude Include="Main\targetver.h" />
+    <ClInclude Include="MyFiles\MyIPAutoThreshold.h" />
+    <ClInclude Include="MyFiles\MyIPSpetialFilter.h" />
+    <ClInclude Include="Dialog\NoiseDlg.h" />
+    <ClInclude Include="MyFiles\MyIPEdge.h" />
+    <ClInclude Include="MyFiles\MyIPMorphology.h" />
+    <ClInclude Include="MyIPFreqFilter.h" />
+    <ClInclude Include="MyIPGeometry.h" />
+    <ClInclude Include="MyIPObjectDetection.h" />
+    <ClInclude Include="PatternMatchingDlg.h" />
+    <ClInclude Include="resource.h" />
+    <ClInclude Include="MyFiles\RGBBYTE.h" />
+    <ClInclude Include="MyFiles\RGBWORD.h" />
+    <ClInclude Include="Dialog\ThresholdDlg.h" />
+    <ClInclude Include="Dialog\SpetialFilterDlg.h" />
+    <ClInclude Include="Dialog\ShapeningFilterDlg.h" />
+    <ClInclude Include="MyFiles\ShapeElement.h" />
+    <ClInclude Include="TranslationDlg.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="ContourThresoldDlg.cpp" />
+    <ClCompile Include="Dialog\ArithmeticLogicalDlg.cpp" />
+    <ClCompile Include="Dialog\ColorCombineDlg.cpp" />
+    <ClCompile Include="Dialog\CVThresholdDlg.cpp" />
+    <ClCompile Include="Dialog\BrightnessContrastDlg.cpp" />
+    <ClCompile Include="Dialog\HistogramDlg.cpp" />
+    <ClCompile Include="Dialog\EdgeDetectorDlg.cpp" />
+    <ClCompile Include="Dialog\LineProfileDlg.cpp" />
+    <ClCompile Include="FrequencyFilterDlg.cpp" />
+    <ClCompile Include="HoughLineDlg.cpp" />
+    <ClCompile Include="Logger.cpp" />
+    <ClCompile Include="Main\ChildFrm.cpp" />
+    <ClCompile Include="Dialog\GammaDlg.cpp" />
+    <ClCompile Include="Main\MainFrm.cpp" />
+    <ClCompile Include="Dialog\MorphologyDlg.cpp" />
+    <ClCompile Include="Dialog\MorphAlgorithmDlg.cpp" />
+    <ClCompile Include="LoopDlg.cpp" />
+    <ClCompile Include="MyCSVFile.cpp" />
+    <ClCompile Include="MyFiles\MyFunction.cpp" />
+    <ClCompile Include="MyFiles\MyIPConvert.cpp" />
+    <ClCompile Include="MyFiles\MyIPImage.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Use</PrecompiledHeader>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\Image Process\MyIPTool2;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <ClCompile Include="MyFiles\MyIPEnhance.cpp" />
+    <ClCompile Include="Main\MyIPTool2.cpp" />
+    <ClCompile Include="Main\MyIPTool2Doc.cpp" />
+    <ClCompile Include="Main\MyIPTool2View.cpp" />
+    <ClCompile Include="Main\OutputWnd.cpp" />
+    <ClCompile Include="Main\stdafx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="MyFiles\RGBBYTE.cpp" />
+    <ClCompile Include="MyFiles\MyIPAutoThreshold.cpp" />
+    <ClCompile Include="MyFiles\RGBWORD.cpp" />
+    <ClCompile Include="Dialog\ThresholdDlg.cpp" />
+    <ClCompile Include="MyFiles\MyIPSpetialFilter.cpp" />
+    <ClCompile Include="Dialog\NoiseDlg.cpp" />
+    <ClCompile Include="Dialog\SpetialFilterDlg.cpp" />
+    <ClCompile Include="MyFiles\MyIPEdge.cpp" />
+    <ClCompile Include="Dialog\ShapeningFilterDlg.cpp" />
+    <ClCompile Include="MyFiles\MyIPMorphology.cpp" />
+    <ClCompile Include="MyFiles\ShapeElement.cpp" />
+    <ClCompile Include="MyIPFreqFilter.cpp" />
+    <ClCompile Include="MyIPGeometry.cpp" />
+    <ClCompile Include="MyIPObjectDetection.cpp" />
+    <ClCompile Include="PatternMatchingDlg.cpp" />
+    <ClCompile Include="TranslationDlg.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="MyIPTool2.reg" />
+    <None Include="res\MyIPTool2.rc2" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="MyIPTool2.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="res\MyIPTool2.ico" />
+    <Image Include="res\MyIPTool2Doc.ico" />
+    <Image Include="res\output_wnd.ico" />
+    <Image Include="res\output_wnd_hc.ico" />
+    <Image Include="res\Toolbar.bmp" />
+    <Image Include="res\Toolbar256.bmp" />
+    <Image Include="UserImages.bmp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties RESOURCE_FILE="MyIPTool2.rc" />
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

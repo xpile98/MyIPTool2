@@ -1,0 +1,320 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="MyFiles">
+      <UniqueIdentifier>{87007ab8-b416-4757-8925-d919f0bae3ce}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Dialog">
+      <UniqueIdentifier>{d381bcfd-34bc-4f85-b3b4-2a412f73fd8f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="리소스 파일">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Main">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="MyFiles\MyFunction.h">
+      <Filter>MyFiles</Filter>
+    </ClInclude>
+    <ClInclude Include="MyFiles\MyIPImage.h">
+      <Filter>MyFiles</Filter>
+    </ClInclude>
+    <ClInclude Include="MyFiles\MyIPConvert.h">
+      <Filter>MyFiles</Filter>
+    </ClInclude>
+    <ClInclude Include="Main\ChildFrm.h">
+      <Filter>Main</Filter>
+    </ClInclude>
+    <ClInclude Include="Main\MainFrm.h">
+      <Filter>Main</Filter>
+    </ClInclude>
+    <ClInclude Include="Main\MyIPTool2.h">
+      <Filter>Main</Filter>
+    </ClInclude>
+    <ClInclude Include="Main\MyIPTool2Doc.h">
+      <Filter>Main</Filter>
+    </ClInclude>
+    <ClInclude Include="Main\MyIPTool2View.h">
+      <Filter>Main</Filter>
+    </ClInclude>
+    <ClInclude Include="Main\OutputWnd.h">
+      <Filter>Main</Filter>
+    </ClInclude>
+    <ClInclude Include="Main\stdafx.h">
+      <Filter>Main</Filter>
+    </ClInclude>
+    <ClInclude Include="Main\targetver.h">
+      <Filter>Main</Filter>
+    </ClInclude>
+    <ClInclude Include="MyFiles\MyIPEnhance.h">
+      <Filter>MyFiles</Filter>
+    </ClInclude>
+    <ClInclude Include="resource.h" />
+    <ClInclude Include="Dialog\HistogramDlg.h">
+      <Filter>Dialog</Filter>
+    </ClInclude>
+    <ClInclude Include="MyFiles\RGBBYTE.h">
+      <Filter>MyFiles</Filter>
+    </ClInclude>
+    <ClInclude Include="Dialog\CVThresholdDlg.h">
+      <Filter>Dialog</Filter>
+    </ClInclude>
+    <ClInclude Include="Dialog\ArithmeticLogicalDlg.h">
+      <Filter>Dialog</Filter>
+    </ClInclude>
+    <ClInclude Include="Dialog\ColorCombineDlg.h">
+      <Filter>Dialog</Filter>
+    </ClInclude>
+    <ClInclude Include="MyFiles\RGBWORD.h">
+      <Filter>MyFiles</Filter>
+    </ClInclude>
+    <ClInclude Include="MyFiles\MyIPAutoThreshold.h">
+      <Filter>MyFiles</Filter>
+    </ClInclude>
+    <ClInclude Include="Dialog\ThresholdDlg.h">
+      <Filter>Dialog</Filter>
+    </ClInclude>
+    <ClInclude Include="Dialog\SpetialFilterDlg.h">
+      <Filter>Dialog</Filter>
+    </ClInclude>
+    <ClInclude Include="Dialog\NoiseDlg.h">
+      <Filter>Dialog</Filter>
+    </ClInclude>
+    <ClInclude Include="MyFiles\MyIPSpetialFilter.h">
+      <Filter>MyFiles</Filter>
+    </ClInclude>
+    <ClInclude Include="Dialog\EdgeDetectorDlg.h">
+      <Filter>Dialog</Filter>
+    </ClInclude>
+    <ClInclude Include="Dialog\LineProfileDlg.h">
+      <Filter>Dialog</Filter>
+    </ClInclude>
+    <ClInclude Include="Dialog\ShapeningFilterDlg.h">
+      <Filter>Dialog</Filter>
+    </ClInclude>
+    <ClInclude Include="MyFiles\MyIPEdge.h">
+      <Filter>MyFiles</Filter>
+    </ClInclude>
+    <ClInclude Include="MyFiles\MyIPMorphology.h">
+      <Filter>MyFiles</Filter>
+    </ClInclude>
+    <ClInclude Include="Dialog\MorphologyDlg.h">
+      <Filter>Dialog</Filter>
+    </ClInclude>
+    <ClInclude Include="MyFiles\ShapeElement.h">
+      <Filter>MyFiles</Filter>
+    </ClInclude>
+    <ClInclude Include="Logger.h">
+      <Filter>Main</Filter>
+    </ClInclude>
+    <ClInclude Include="MyCSVFile.h">
+      <Filter>MyFiles</Filter>
+    </ClInclude>
+    <ClInclude Include="Dialog\BrightnessContrastDlg.h">
+      <Filter>Dialog</Filter>
+    </ClInclude>
+    <ClInclude Include="Dialog\GammaDlg.h">
+      <Filter>Dialog</Filter>
+    </ClInclude>
+    <ClInclude Include="LoopDlg.h">
+      <Filter>Dialog</Filter>
+    </ClInclude>
+    <ClInclude Include="MyIPFreqFilter.h">
+      <Filter>MyFiles</Filter>
+    </ClInclude>
+    <ClInclude Include="Dialog\MorphAlgorithmDlg.h">
+      <Filter>Dialog</Filter>
+    </ClInclude>
+    <ClInclude Include="FrequencyFilterDlg.h">
+      <Filter>Dialog</Filter>
+    </ClInclude>
+    <ClInclude Include="PatternMatchingDlg.h">
+      <Filter>Dialog</Filter>
+    </ClInclude>
+    <ClInclude Include="MyIPObjectDetection.h">
+      <Filter>MyFiles</Filter>
+    </ClInclude>
+    <ClInclude Include="HoughLineDlg.h">
+      <Filter>Dialog</Filter>
+    </ClInclude>
+    <ClInclude Include="MyIPGeometry.h" />
+    <ClInclude Include="TranslationDlg.h">
+      <Filter>Dialog</Filter>
+    </ClInclude>
+    <ClInclude Include="ContourThresoldDlg.h">
+      <Filter>Dialog</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="MyFiles\MyFunction.cpp">
+      <Filter>MyFiles</Filter>
+    </ClCompile>
+    <ClCompile Include="MyFiles\MyIPImage.cpp">
+      <Filter>MyFiles</Filter>
+    </ClCompile>
+    <ClCompile Include="MyFiles\MyIPConvert.cpp">
+      <Filter>MyFiles</Filter>
+    </ClCompile>
+    <ClCompile Include="Main\ChildFrm.cpp">
+      <Filter>Main</Filter>
+    </ClCompile>
+    <ClCompile Include="Main\MainFrm.cpp">
+      <Filter>Main</Filter>
+    </ClCompile>
+    <ClCompile Include="Main\MyIPTool2.cpp">
+      <Filter>Main</Filter>
+    </ClCompile>
+    <ClCompile Include="Main\MyIPTool2Doc.cpp">
+      <Filter>Main</Filter>
+    </ClCompile>
+    <ClCompile Include="Main\MyIPTool2View.cpp">
+      <Filter>Main</Filter>
+    </ClCompile>
+    <ClCompile Include="Main\OutputWnd.cpp">
+      <Filter>Main</Filter>
+    </ClCompile>
+    <ClCompile Include="Main\stdafx.cpp">
+      <Filter>Main</Filter>
+    </ClCompile>
+    <ClCompile Include="MyFiles\MyIPEnhance.cpp">
+      <Filter>MyFiles</Filter>
+    </ClCompile>
+    <ClCompile Include="Dialog\HistogramDlg.cpp">
+      <Filter>Dialog</Filter>
+    </ClCompile>
+    <ClCompile Include="MyFiles\RGBBYTE.cpp">
+      <Filter>MyFiles</Filter>
+    </ClCompile>
+    <ClCompile Include="Dialog\ArithmeticLogicalDlg.cpp">
+      <Filter>Dialog</Filter>
+    </ClCompile>
+    <ClCompile Include="Dialog\ColorCombineDlg.cpp">
+      <Filter>Dialog</Filter>
+    </ClCompile>
+    <ClCompile Include="Dialog\CVThresholdDlg.cpp">
+      <Filter>Dialog</Filter>
+    </ClCompile>
+    <ClCompile Include="MyFiles\MyIPAutoThreshold.cpp">
+      <Filter>MyFiles</Filter>
+    </ClCompile>
+    <ClCompile Include="MyFiles\RGBWORD.cpp">
+      <Filter>MyFiles</Filter>
+    </ClCompile>
+    <ClCompile Include="Dialog\ThresholdDlg.cpp">
+      <Filter>Dialog</Filter>
+    </ClCompile>
+    <ClCompile Include="Dialog\NoiseDlg.cpp">
+      <Filter>Dialog</Filter>
+    </ClCompile>
+    <ClCompile Include="MyFiles\MyIPSpetialFilter.cpp">
+      <Filter>MyFiles</Filter>
+    </ClCompile>
+    <ClCompile Include="Dialog\SpetialFilterDlg.cpp">
+      <Filter>Dialog</Filter>
+    </ClCompile>
+    <ClCompile Include="Dialog\EdgeDetectorDlg.cpp">
+      <Filter>Dialog</Filter>
+    </ClCompile>
+    <ClCompile Include="Dialog\LineProfileDlg.cpp">
+      <Filter>Dialog</Filter>
+    </ClCompile>
+    <ClCompile Include="Dialog\ShapeningFilterDlg.cpp">
+      <Filter>Dialog</Filter>
+    </ClCompile>
+    <ClCompile Include="MyFiles\MyIPEdge.cpp">
+      <Filter>MyFiles</Filter>
+    </ClCompile>
+    <ClCompile Include="MyFiles\MyIPMorphology.cpp">
+      <Filter>MyFiles</Filter>
+    </ClCompile>
+    <ClCompile Include="Dialog\MorphologyDlg.cpp">
+      <Filter>Dialog</Filter>
+    </ClCompile>
+    <ClCompile Include="MyFiles\ShapeElement.cpp">
+      <Filter>MyFiles</Filter>
+    </ClCompile>
+    <ClCompile Include="Logger.cpp">
+      <Filter>Main</Filter>
+    </ClCompile>
+    <ClCompile Include="MyCSVFile.cpp">
+      <Filter>MyFiles</Filter>
+    </ClCompile>
+    <ClCompile Include="Dialog\BrightnessContrastDlg.cpp">
+      <Filter>Dialog</Filter>
+    </ClCompile>
+    <ClCompile Include="Dialog\GammaDlg.cpp">
+      <Filter>Dialog</Filter>
+    </ClCompile>
+    <ClCompile Include="LoopDlg.cpp">
+      <Filter>Dialog</Filter>
+    </ClCompile>
+    <ClCompile Include="MyIPFreqFilter.cpp">
+      <Filter>MyFiles</Filter>
+    </ClCompile>
+    <ClCompile Include="PatternMatchingDlg.cpp">
+      <Filter>Dialog</Filter>
+    </ClCompile>
+    <ClCompile Include="Dialog\MorphAlgorithmDlg.cpp">
+      <Filter>Dialog</Filter>
+    </ClCompile>
+    <ClCompile Include="FrequencyFilterDlg.cpp">
+      <Filter>Dialog</Filter>
+    </ClCompile>
+    <ClCompile Include="MyIPObjectDetection.cpp">
+      <Filter>MyFiles</Filter>
+    </ClCompile>
+    <ClCompile Include="HoughLineDlg.cpp">
+      <Filter>Dialog</Filter>
+    </ClCompile>
+    <ClCompile Include="MyIPGeometry.cpp">
+      <Filter>Main</Filter>
+    </ClCompile>
+    <ClCompile Include="TranslationDlg.cpp">
+      <Filter>Dialog</Filter>
+    </ClCompile>
+    <ClCompile Include="ContourThresoldDlg.cpp">
+      <Filter>Dialog</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="MyIPTool2.reg" />
+    <None Include="res\MyIPTool2.rc2">
+      <Filter>리소스 파일</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="MyIPTool2.rc">
+      <Filter>리소스 파일</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="res\output_wnd.ico">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="res\output_wnd_hc.ico">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="UserImages.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="res\MyIPTool2Doc.ico">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="res\MyIPTool2.ico">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="res\Toolbar.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="res\Toolbar256.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+  </ItemGroup>
+</Project>

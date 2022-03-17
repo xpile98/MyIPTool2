@@ -1,0 +1,1373 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#ifndef APSTUDIO_INVOKED
+#include "targetver.h"
+#endif
+#include "afxres.h"
+#include "verrsrc.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// 한국어(대한민국) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_KOR)
+LANGUAGE LANG_KOREAN, SUBLANG_DEFAULT
+#pragma code_page(949)
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#ifndef APSTUDIO_INVOKED\r\n"
+    "#include ""targetver.h""\r\n"
+    "#endif\r\n"
+    "#include ""afxres.h""\r\n"
+    "#include ""verrsrc.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_KOR)\r\n"
+    "LANGUAGE 18, 1\r\n"
+    "#include ""res\\MyIPTool2.rc2""  // Microsoft Visual C++ 이외의 다른 도구에서 편집한 리소스입니다.\r\n"
+    "#include ""l.KOR\\afxres.rc""      // 표준 구성 요소\r\n"
+    "#include ""l.KOR\\afxprint.rc""    // 인쇄 미리 보기 리소스\r\n"
+    "#if !defined(_AFXDLL)\r\n"
+    "#include ""l.KOR\\afxribbon.rc""        // MFC 리본 및 컨트롤 막대 리소스\r\n"
+    "#endif\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON                    "res\\MyIPTool2.ico"
+IDR_MyIPTool2TYPE       ICON                    "res\\MyIPTool2Doc.ico"
+IDI_OUTPUT_WND          ICON                    "res\\output_wnd.ico"
+IDI_OUTPUT_WND_HC       ICON                    "res\\output_wnd_hc.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDR_MAINFRAME           BITMAP                  "res\\Toolbar.bmp"
+IDR_MAINFRAME_256       BITMAP                  "res\\Toolbar256.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Toolbar
+//
+
+IDR_MAINFRAME TOOLBAR 16, 15
+BEGIN
+    BUTTON      ID_FILE_NEW
+    BUTTON      ID_FILE_OPEN
+    BUTTON      ID_FILE_SAVE
+    SEPARATOR
+    BUTTON      ID_EDIT_CUT
+    BUTTON      ID_EDIT_COPY
+    BUTTON      ID_EDIT_PASTE
+    SEPARATOR
+    BUTTON      ID_FILE_PRINT
+    BUTTON      ID_APP_ABOUT
+END
+
+IDR_MAINFRAME_256 TOOLBAR 16, 15
+BEGIN
+    BUTTON      ID_FILE_NEW
+    BUTTON      ID_FILE_OPEN
+    BUTTON      ID_FILE_SAVE
+    SEPARATOR
+    BUTTON      ID_EDIT_CUT
+    BUTTON      ID_EDIT_COPY
+    BUTTON      ID_EDIT_PASTE
+    BUTTON      ID_FILE_PRINT
+    BUTTON      ID_APP_ABOUT
+    SEPARATOR
+    BUTTON      ID_VIEW_HISTOGRAM
+    BUTTON      ID_THRESHOLD
+    BUTTON      ID_ARITHMETICLOGICAL
+    SEPARATOR
+    BUTTON      ID_LINE_PROFILE
+    BUTTON      ID_GETROI
+    SEPARATOR
+    BUTTON      ID_WINDOW_CLOSEALL
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MAINFRAME MENU
+BEGIN
+    POPUP "파일(&F)"
+    BEGIN
+        MENUITEM "새로 만들기(&N)\tCtrl+N",          ID_FILE_NEW
+        MENUITEM "열기(&O)...\tCtrl+O",           ID_FILE_OPEN
+        MENUITEM "닫기(&C)",                      ID_FILE_CLOSE
+        MENUITEM SEPARATOR
+        MENUITEM "인쇄 설정(&R)...",                ID_FILE_PRINT_SETUP
+        MENUITEM SEPARATOR
+        MENUITEM "최근에 사용한 파일",                  ID_FILE_MRU_FILE1, GRAYED
+        MENUITEM SEPARATOR
+        MENUITEM "끝내기(&X)",                     ID_APP_EXIT
+    END
+    POPUP "보기(&V)"
+    BEGIN
+        POPUP "도구 모음 및 도킹 창(&T)"
+        BEGIN
+            MENUITEM "<자리 표시자>",                    ID_VIEW_TOOLBAR
+        END
+        MENUITEM "상태 표시줄(&S)",                  ID_VIEW_STATUS_BAR
+    END
+    POPUP "도움말(&H)"
+    BEGIN
+        MENUITEM "MyIPTool2 정보(&A)...",         ID_APP_ABOUT
+    END
+    POPUP "Webcam"
+    BEGIN
+        MENUITEM "Live Cam",                    ID_WEBCAM_LIVECAM
+    END
+END
+
+IDR_MyIPTool2TYPE MENU
+BEGIN
+    MENUITEM SEPARATOR
+    POPUP "파일(&F)"
+    BEGIN
+        MENUITEM "새로 만들기(&N)\tCtrl+N",          ID_FILE_NEW
+        MENUITEM "열기(&O)...\tCtrl+O",           ID_FILE_OPEN
+        MENUITEM "닫기(&C)",                      ID_FILE_CLOSE
+        MENUITEM "저장(&S)\tCtrl+S",              ID_FILE_SAVE
+        MENUITEM "다른 이름으로 저장(&A)...",           ID_FILE_SAVE_AS
+        MENUITEM SEPARATOR
+        MENUITEM "인쇄(&P)...\tCtrl+P",           ID_FILE_PRINT
+        MENUITEM "인쇄 미리 보기(&V)",                ID_FILE_PRINT_PREVIEW
+        MENUITEM "인쇄 설정(&R)...",                ID_FILE_PRINT_SETUP
+        MENUITEM SEPARATOR
+        MENUITEM "최근에 사용한 파일",                  ID_FILE_MRU_FILE1
+        MENUITEM SEPARATOR
+        MENUITEM "끝내기(&X)",                     ID_APP_EXIT
+    END
+    POPUP "창(&W)"
+    BEGIN
+        MENUITEM "새 창(&N)",                     ID_WINDOW_NEW
+        MENUITEM "계단식 배열(&C)",                  ID_WINDOW_CASCADE
+        MENUITEM "바둑판식 배열(&T)",                 ID_WINDOW_TILE_HORZ
+        MENUITEM "아이콘 정렬(&A)",                  ID_WINDOW_ARRANGE
+        MENUITEM "모든 창 닫기",                     ID_WINDOW_CLOSEALL
+    END
+    POPUP "보기(&V)"
+    BEGIN
+        POPUP "도구 모음 및 도킹 창(&T)"
+        BEGIN
+            MENUITEM "<자리 표시자>",                    ID_VIEW_TOOLBAR
+        END
+        MENUITEM "상태 표시줄(&S)",                  ID_VIEW_STATUS_BAR
+        MENUITEM "히스토그램(&H)",                   ID_VIEW_HISTOGRAM
+        MENUITEM "Line Profile",                ID_LINE_PROFILE
+        MENUITEM "Get ROI",                     ID_GETROI
+    END
+    POPUP "기본도구"
+    BEGIN
+        POPUP "OpenCV"
+        BEGIN
+            MENUITEM "그레이스케일 변환",                   ID_OPENCV_RGBTOGRAY
+            POPUP "색상 평면 나누기"
+            BEGIN
+                MENUITEM "RGB",                         ID_OPENCV_COLOR_SPLIT_RGB
+                MENUITEM "CMY",                         ID_OPENCV_COLOR_SPLIT_CMY
+                MENUITEM "CMYK",                        ID_OPENCV_COLOR_SPLIT_CMYK
+                MENUITEM "HSI",                         ID_OPENCV_COLOR_SPLIT_HSI
+                MENUITEM "HSV",                         ID_OPENCV_COLOR_SPLIT_HSV
+                MENUITEM "YUV",                         ID_OPENCV_COLOR_SPLIT_YUV
+                MENUITEM "YCrCb",                       ID_OPENCV_COLOR_SPLIT_YCRCB
+                MENUITEM "LAB",                         ID_OPENCV_COLOR_SPLIT_LAB
+            END
+            MENUITEM "Histogram",                   ID_OPENCV_HISTOGRAM
+        END
+        MENUITEM "Convert 8bit to 16bit",       ID_CONVERT8BITTO16BIT
+        MENUITEM "그레이스케일 변환",                   ID_RGBTOGRAY
+        POPUP "색상 평면 나누기"
+        BEGIN
+            MENUITEM "RGB",                         ID_COLOR_SPLIT_RGB
+            MENUITEM "HSI",                         ID_COLOR_SPLIT_HSI
+            MENUITEM "YUV",                         ID_COLOR_SPLIT_YUV
+        END
+        POPUP "색상 평만 합치기"
+        BEGIN
+            MENUITEM "RGB",                         ID_COLOR_COMBINE_RGB
+            MENUITEM "HSI",                         ID_COLOR_COMBINE_HSI
+            MENUITEM "YUV",                         ID_COLOR_COMBINE_YUV
+        END
+        MENUITEM "비트 평면 분할",                    ID_BITPLANE
+        MENUITEM "Threshold",                   ID_THRESHOLD
+        MENUITEM "Convert 16bit",               ID_32904
+    END
+    POPUP "영상개선"
+    BEGIN
+        POPUP "OpenCV"
+        BEGIN
+            POPUP "히스토그램"
+            BEGIN
+                MENUITEM "히스토그램 균등화(&E)",               ID_CV_HISTO_EQUALIZATION
+            END
+        END
+        MENUITEM "영상 반전",                       ID_INVERSE
+        MENUITEM "밝기/명암비 조절",                   ID_BRIGHTNESS_CONTRAST
+        MENUITEM "감마 보정",                       ID_GAMMA
+        POPUP "히스토그램(&H)"
+        BEGIN
+            MENUITEM "히스토그램 스트레칭(&S)",              ID_HISTO_STRETCHING
+            MENUITEM "히스토그램 균등화(&E)",               ID_HISTO_EQUALIZATION
+        END
+    END
+    POPUP "영상처리"
+    BEGIN
+        POPUP "OpenCV"
+        BEGIN
+            MENUITEM "산술및 논리연산",                    ID_CV_ARITHMETICLOGICAL
+            MENUITEM "Automatic Threshold",         ID_CV_AUTOMATICTHRESHOLD
+            POPUP "Spatial Filter"
+            BEGIN
+                MENUITEM "Average",                     ID_CV_SPATIALFILTER_AVERAGE
+                MENUITEM "Gaussian",                    ID_CV_SPATIALFILTER_GAUSSIAN
+                MENUITEM "Maximum",                     ID_CV_SPATIALFILTER_MAXIMUM
+                MENUITEM "Minumum",                     ID_CV_SPATIALFILTER_MINUMUM
+                MENUITEM "Median",                      ID_CV_SPATIALFILTER_MEDIAN
+                MENUITEM "Median(Adaptive)",            ID_CV_SPATIALFILTER_ADAPTIVE_MEDIAN
+            END
+            MENUITEM "Morphology",                  ID_CV_MORPHOLOGY
+        END
+        MENUITEM "산술및 논리연산",                    ID_ARITHMETICLOGICAL
+        POPUP "Automatic Threshold"
+        BEGIN
+            MENUITEM "Iterative",                   ID_AUTOMATICTHRESHOLD_ITERATIVE
+            MENUITEM "Otsu",                        ID_AUTOMATICTHRESHOLD_OTSU
+            MENUITEM "Entropy",                     ID_AUTOMATICTHRESHOLD_ENTROPY
+        END
+        MENUITEM "Add Noise",                   ID_MYIPIMAGE_ADDNOISE
+        POPUP "Spatial Filter"
+        BEGIN
+            MENUITEM "Average",                     ID_SPATIALFILTER_AVERAGE
+            MENUITEM "Gaussian",                    ID_SPATIALFILTER_GAUSSIAN
+            MENUITEM "Maximum",                     ID_SPATIALFILTER_MAXIMUM
+            MENUITEM "Minumum",                     ID_SPATIALFILTER_MINUMUM
+            MENUITEM "Median",                      ID_SPATIALFILTER_MEDIAN
+            MENUITEM "Median(Adaptive)",            ID_SPATIALFILTER_ADAPTIVE_MEDIAN
+        END
+        POPUP "Sharpening"
+        BEGIN
+            MENUITEM "Highboost Filter",            ID_SHARPENING_HIGHBOOSTFILTER
+            MENUITEM "Laplacian Sharpening",        ID_SHARPENING_LAPLACIANSHARPENING
+        END
+        MENUITEM "Edge Detector",               ID_SPATIALFILTER_EDGEDETECTOR
+        MENUITEM "Morphology Test",             ID_MORPHOLOGY_TEST
+        MENUITEM "Binary Morphology",           ID_MORPHOLOGY
+        MENUITEM "Grayscale Morphology",        ID_GRAYSCALE_MORPHOLOGY
+        POPUP "Geometric Transformations"
+        BEGIN
+            MENUITEM "Translation",                 ID_GEOMETRICTRANSFORMATIONS_TRANSLATION
+        END
+    END
+    POPUP "주파수 영역"
+    BEGIN
+        MENUITEM "Fourier Transform",           ID_FOURIER_TRANSFORM
+        MENUITEM "Frequency Domain Filter",     ID_FREQ_FILTER
+        POPUP "DFT FIlter2D"
+        BEGIN
+            MENUITEM "Average",                     ID_DFTFILTER2D_AVERAGE
+            MENUITEM "Gaussian",                    ID_DFTFILTER2D_GAUSSIAN
+        END
+    END
+    POPUP "객체 검출"
+    BEGIN
+        MENUITEM "Pattern Matching",            ID_OBJECTDETECTION_PATTERNMATCHING
+        MENUITEM "Hough Transform",             ID_HOUGH_TRANSFORM
+        POPUP "Contour Tracing"
+        BEGIN
+            MENUITEM "Single Object",               ID_CONTOURTRACING_SINGLEOBJECT
+            MENUITEM "Euclidean",                   ID_CONTOURTRACING_EUCLIDEAN
+        END
+    END
+    POPUP "편집(&E)"
+    BEGIN
+        MENUITEM "실행 취소(&U)\tCtrl+Z",           ID_EDIT_UNDO
+        MENUITEM SEPARATOR
+        MENUITEM "잘라내기(&T)\tCtrl+X",            ID_EDIT_CUT
+        MENUITEM "복사(&C)\tCtrl+C",              ID_EDIT_COPY
+        MENUITEM "붙여넣기(&P)\tCtrl+V",            ID_EDIT_PASTE
+    END
+    POPUP "도움말(&H)"
+    BEGIN
+        MENUITEM "MyIPTool2 정보(&A)...",         ID_APP_ABOUT
+    END
+    POPUP "Webcam"
+    BEGIN
+        MENUITEM "Live Cam",                    ID_WEBCAM_LIVECAM
+    END
+    POPUP "User Feature"
+    BEGIN
+        MENUITEM "Periodic Translation",        ID_USERFEATURE_PERIODICTRANSLATION
+    END
+END
+
+IDR_POPUP_EDIT MENU
+BEGIN
+    POPUP "편집"
+    BEGIN
+        MENUITEM "잘라내기(&T)\tCtrl+X",            ID_EDIT_CUT
+        MENUITEM "복사(&C)\tCtrl+C",              ID_EDIT_COPY
+        MENUITEM "붙여넣기(&P)\tCtrl+V",            ID_EDIT_PASTE
+    END
+END
+
+IDR_OUTPUT_POPUP MENU
+BEGIN
+    POPUP "팝업"
+    BEGIN
+        MENUITEM "복사(&C)",                      ID_EDIT_COPY
+        MENUITEM "지우기(&C)",                     ID_EDIT_CLEAR
+        MENUITEM SEPARATOR
+        MENUITEM "숨기기(&H)",                     ID_VIEW_OUTPUTWND
+    END
+END
+
+IDR_HELP_MENU MENU
+BEGIN
+    MENUITEM "MyIPTool2 정보(&A)...",         ID_APP_ABOUT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+IDR_MAINFRAME ACCELERATORS
+BEGIN
+    "N",            ID_FILE_NEW,            VIRTKEY, CONTROL
+    "O",            ID_FILE_OPEN,           VIRTKEY, CONTROL
+    "S",            ID_FILE_SAVE,           VIRTKEY, CONTROL
+    "P",            ID_FILE_PRINT,          VIRTKEY, CONTROL
+    "Z",            ID_EDIT_UNDO,           VIRTKEY, CONTROL
+    "X",            ID_EDIT_CUT,            VIRTKEY, CONTROL
+    "C",            ID_EDIT_COPY,           VIRTKEY, CONTROL
+    "V",            ID_EDIT_PASTE,          VIRTKEY, CONTROL
+    VK_BACK,        ID_EDIT_UNDO,           VIRTKEY, ALT
+    VK_DELETE,      ID_EDIT_CUT,            VIRTKEY, SHIFT
+    VK_INSERT,      ID_EDIT_COPY,           VIRTKEY, CONTROL
+    VK_INSERT,      ID_EDIT_PASTE,          VIRTKEY, SHIFT
+    VK_F6,          ID_NEXT_PANE,           VIRTKEY 
+    VK_F6,          ID_PREV_PANE,           VIRTKEY, SHIFT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOGEX 0, 0, 170, 62
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "MyIPTool2 정보"
+FONT 9, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,14,14,21,20
+    LTEXT           "MyIPTool2, 버전 1.0",IDC_STATIC,42,14,114,8,SS_NOPREFIX
+    LTEXT           "Copyright (C) 2019",IDC_STATIC,42,26,114,8
+    DEFPUSHBUTTON   "확인",IDOK,113,41,50,14,WS_GROUP
+END
+
+IDD_BRIGHTNESS_CONTRAST_DLG DIALOGEX 0, 0, 285, 128
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "밝기/명암비 조정"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    GROUPBOX        "밝기(Offset)",IDC_STATIC,6,12,270,42
+    CONTROL         "",IDC_OFFSET_SLIDER,"msctls_trackbar32",TBS_AUTOTICKS | WS_TABSTOP,18,30,204,15
+    EDITTEXT        IDC_OFFSET_EDIT,228,30,40,14,ES_CENTER | ES_AUTOHSCROLL
+    GROUPBOX        "명암비(Contrast/Gain)",IDC_STATIC,6,60,270,42
+    CONTROL         "",IDC_GAIN_SLIDER,"msctls_trackbar32",TBS_AUTOTICKS | WS_TABSTOP,18,78,204,15
+    EDITTEXT        IDC_GAIN_EDIT,228,78,40,14,ES_CENTER | ES_AUTOHSCROLL
+    PUSHBUTTON      "취소",IDCANCEL,162,108,50,14
+    DEFPUSHBUTTON   "확인",IDOK,228,108,50,14
+    CONTROL         "16 BIT",IDC_CHECK_16BIT,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,239,3,37,10
+END
+
+IDD_GAMMA_DLG DIALOGEX 0, 0, 285, 80
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "감마 보정"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    GROUPBOX        "감마(Gamma)",-1,6,12,270,42
+    CONTROL         "",IDC_GAMMA_SLIDER,"msctls_trackbar32",TBS_AUTOTICKS | WS_TABSTOP,18,30,204,15
+    EDITTEXT        IDC_GAMMA_EDIT,228,30,40,14,ES_CENTER | ES_AUTOHSCROLL
+    PUSHBUTTON      "취소",IDCANCEL,162,60,50,14
+    DEFPUSHBUTTON   "확인",IDOK,228,60,50,14
+    CONTROL         "16 BIT",IDC_CHECK_16BIT,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,239,3,37,10
+END
+
+IDD_HISTOGRAM DIALOGEX 0, 0, 459, 165
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "히스토그램"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "확인",IDOK,372,90,72,60
+END
+
+IDD_COLOR_COMBINE DIALOGEX 0, 0, 237, 153
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "색상 평면 합치기"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    LTEXT           "기능 : ",IDC_STATIC,54,12,24,12
+    EDITTEXT        IDC_COLOR_SPACE,90,12,114,12,ES_CENTER | ES_AUTOHSCROLL | ES_READONLY | NOT WS_TABSTOP
+    GROUPBOX        "이미지 선택",IDC_STATIC,6,36,222,90
+    LTEXT           "이미지 #1",IDC_STATIC,24,54,36,8
+    COMBOBOX        IDC_COMBO_IMAGE1,78,54,138,30,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "이미지 #2",IDC_STATIC,24,78,36,8
+    COMBOBOX        IDC_COMBO_IMAGE2,78,78,138,30,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "이미지 #3",IDC_STATIC,24,102,36,8
+    COMBOBOX        IDC_COMBO_IMAGE3,78,102,138,30,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    DEFPUSHBUTTON   "확인",IDOK,24,132,50,14
+    PUSHBUTTON      "취소",IDCANCEL,162,132,50,14
+END
+
+IDD_ARITHMETIC_LOGICAL DIALOGEX 0, 0, 1029, 242
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Arithmetic Logical"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    CONTROL         "16 BIT",IDC_CHECK_16BIT,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,702,0,36,18
+    GROUPBOX        "이미지 선택",IDC_STATIC,528,12,222,90
+    LTEXT           "이미지 #1",IDC_STATIC,540,30,36,8
+    LTEXT           "이미지 #2",IDC_STATIC,540,54,36,8
+    COMBOBOX        IDC_COMBO_IMAGE1,588,30,120,30,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP,WS_EX_ACCEPTFILES
+    COMBOBOX        IDC_COMBO_IMAGE2,588,54,120,30,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP,WS_EX_ACCEPTFILES
+    GROUPBOX        "산술/논리 연산 선택",IDC_STATIC,528,114,222,102
+    CONTROL         "Add (&A)",IDC_RADIO_FUNCTION1,"Button",BS_AUTORADIOBUTTON | WS_GROUP,540,138,41,10
+    CONTROL         "Subtract (&S)",IDC_RADIO_FUNCTION2,"Button",BS_AUTORADIOBUTTON,612,138,50,10
+    CONTROL         "Average (&V)",IDC_RADIO_FUNCTION3,"Button",BS_AUTORADIOBUTTON,684,138,50,10
+    CONTROL         "Difference (&D)",IDC_RADIO_FUNCTION4,"Button",BS_AUTORADIOBUTTON,540,168,58,10
+    CONTROL         "AND",IDC_RADIO_FUNCTION5,"Button",BS_AUTORADIOBUTTON,612,198,50,10
+    CONTROL         "OR",IDC_RADIO_FUNCTION6,"Button",BS_AUTORADIOBUTTON,540,198,50,10
+    CONTROL         "Minimum",IDC_RADIO_FUNCTION7,"Button",BS_AUTORADIOBUTTON,684,168,50,10
+    CONTROL         "Maximum",IDC_RADIO_FUNCTION8,"Button",BS_AUTORADIOBUTTON,612,168,50,10
+    CONTROL         "XOR",IDC_RADIO_FUNCTION9,"Button",BS_AUTORADIOBUTTON,684,198,50,10
+    DEFPUSHBUTTON   "확인",IDOK,618,222,50,14
+    PUSHBUTTON      "취소",IDCANCEL,696,222,50,14
+    LTEXT           "Constant",IDC_STATIC,540,78,30,8
+    EDITTEXT        IDC_EDIT_CONSTANT,600,78,54,14,ES_AUTOHSCROLL
+    CONTROL         "Use Constant",IDC_CHECK,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,666,78,60,12
+    CONTROL         "",IDC_IMAGE_PREVIEW1,"Static",SS_BLACKFRAME,12,10,240,222,WS_EX_STATICEDGE
+    CONTROL         "",IDC_IMAGE_PREVIEW2,"Static",SS_BLACKFRAME,270,10,240,222,WS_EX_STATICEDGE
+    CONTROL         "",IDC_IMAGE_PREVIEW3,"Static",SS_BLACKFRAME,768,9,240,222,WS_EX_STATICEDGE
+    PUSHBUTTON      "RESULT PREVIEW",IDC_BUTTON_RESULT,528,222,66,14
+END
+
+IDD_THRESHOLD DIALOGEX 0, 0, 333, 159
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "이진화"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    GROUPBOX        "이진화(Threshold)",IDC_STATIC,6,6,318,126
+    CONTROL         "",IDC_THRESHOLD_SLIDER,"msctls_trackbar32",TBS_NOTICKS | WS_TABSTOP,6,138,186,15
+    EDITTEXT        IDC_THRESHOLD_EDIT,258,42,40,14,ES_CENTER | ES_AUTOHSCROLL
+    PUSHBUTTON      "취소",IDCANCEL,204,138,50,14
+    DEFPUSHBUTTON   "확인",IDOK,276,138,50,14
+    LTEXT           "Threshold",IDC_STATIC,198,42,32,8
+    LTEXT           "Histogram",IDC_STATIC,198,71,33,8
+    EDITTEXT        IDC_HISTOGRAM_EDIT,258,71,40,14,ES_CENTER | ES_AUTOHSCROLL | ES_READONLY
+    CONTROL         "16 BIT",IDC_CHECK_16BIT,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,280,15,37,10
+END
+
+IDD_THRESHOLD_CV DIALOGEX 0, 0, 351, 201
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "OpenCV Automatic Thresholding"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "확인",IDOK,180,174,50,14
+    PUSHBUTTON      "취소",IDCANCEL,288,174,50,14
+    GROUPBOX        "Method",IDC_STATIC,6,124,158,72
+    CONTROL         "THRESH_BINARY",IDC_TYPE1,"Button",BS_AUTORADIOBUTTON | WS_GROUP,24,22,71,10
+    GROUPBOX        "Type",IDC_STATIC,6,4,158,114
+    CONTROL         "THRESH_BINARY_INV",IDC_TYPE2,"Button",BS_AUTORADIOBUTTON,24,40,86,10
+    CONTROL         "THRESH_TRUNC",IDC_TYPE3,"Button",BS_AUTORADIOBUTTON,24,58,69,10
+    CONTROL         "THRESH_TOZERO",IDC_TYPE4,"Button",BS_AUTORADIOBUTTON,24,76,73,10
+    CONTROL         "THRESH_TOZERO_INV",IDC_TYPE5,"Button",BS_AUTORADIOBUTTON,24,94,89,10
+    CONTROL         "THRESH_MASK",IDC_METHOD1,"Button",BS_AUTORADIOBUTTON | WS_GROUP,24,142,64,10
+    CONTROL         "THRESH_OTSU",IDC_METHOD2,"Button",BS_AUTORADIOBUTTON,24,160,64,10
+    CONTROL         "THRESH_TRIANGLE",IDC_METHOD3,"Button",BS_AUTORADIOBUTTON,24,178,79,10
+    CONTROL         "",IDC_IMAGE_PREVIEW,"Static",SS_BLACKFRAME,171,8,174,156,WS_EX_STATICEDGE
+END
+
+IDD_SPETIAL_FILTER DIALOGEX 0, 0, 345, 218
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Spetial Filter"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    EDITTEXT        IDC_EDIT1,0,0,345,42,ES_CENTER | ES_MULTILINE | ES_AUTOHSCROLL | ES_READONLY | NOT WS_BORDER
+    RTEXT           "┌─────    Do Gaussian With",IDC_STATIC_GAUSSIAN_OPTION,216,30,117,12,SS_CENTERIMAGE
+    GROUPBOX        "Border Type",IDC_STATIC,12,42,198,168
+    CONTROL         "Constant",IDC_RADIO_BORDERTYPE1,"Button",BS_AUTORADIOBUTTON | WS_GROUP,30,60,45,10
+    CONTROL         "Replicate",IDC_RADIO_BORDERTYPE2,"Button",BS_AUTORADIOBUTTON,30,96,45,10
+    CONTROL         "Reflect",IDC_RADIO_BORDERTYPE3,"Button",BS_AUTORADIOBUTTON,30,132,39,10
+    CONTROL         "Wrap",IDC_RADIO_BORDERTYPE4,"Button",BS_AUTORADIOBUTTON,30,168,33,10
+    GROUPBOX        "Kernel Size",IDC_STATIC_GROUPBOX_KERNEL,234,42,102,54
+    EDITTEXT        IDC_EDIT_KERNEL_HEIGHT,294,60,36,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_KERNEL_WIDTH,294,78,36,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_SIGMA_VALUE,294,114,36,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_N_SIGMA,294,132,36,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_BORDER_VALUE,168,60,36,14,ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "확인",IDOK,234,192,50,14
+    PUSHBUTTON      "취소",IDCANCEL,288,192,50,14
+    RTEXT           "HEIGHT : ",IDC_STATIC,246,60,36,12,SS_CENTERIMAGE
+    RTEXT           "WIDTH : ",IDC_STATIC,246,78,36,12,SS_CENTERIMAGE
+    LTEXT           "iiiiii |abcdefgh| iiiiiii ",IDC_STATIC,90,60,60,8
+    LTEXT           "aaaaaa|abcdefgh|hhhhhhh",IDC_STATIC,90,96,96,8
+    LTEXT           "fedcba|abcdefgh|hgfedcb",IDC_STATIC,90,132,96,8
+    LTEXT           "cdefgh|abcdefgh|abcdefg",IDC_STATIC,90,168,96,8
+    GROUPBOX        "n Sigma",IDC_STATIC_GROUPBOX_SIGMA,234,96,102,54
+    CTEXT           "i :",IDC_STATIC,150,60,18,12
+    RTEXT           "Sigma (σ) : ",IDC_STATIC,246,114,36,12
+    RTEXT           "n :",IDC_STATIC,252,132,30,12
+    CONTROL         "",IDC_RADIO_GAUSSIAN_OPTION1,"Button",BS_AUTORADIOBUTTON | WS_GROUP,222,42,8,10
+    CONTROL         "",IDC_RADIO_GAUSSIAN_OPTION2,"Button",BS_AUTORADIOBUTTON,222,102,8,10
+    CTEXT           "or",IDC_STATIC_GAUSSIAN_OPTION2,216,72,18,8,SS_CENTERIMAGE
+    RTEXT           "Maximum Size :",IDC_STATIC,234,168,54,12
+    GROUPBOX        "Adaptive Median Filter",IDC_STATIC_GROUPBOX_SIGMA3,234,150,102,36
+    EDITTEXT        IDC_EDIT_FILTER_MAX_SIZE,294,168,36,14,ES_AUTOHSCROLL
+END
+
+IDD_NOISE_DLG DIALOGEX 0, 0, 249, 111
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION " "
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "확인",IDOK,126,90,50,14
+    PUSHBUTTON      "취소",IDCANCEL,192,90,50,14
+    GROUPBOX        "     Use Gaussian Noise",IDC_STATIC,6,6,114,78
+    GROUPBOX        "     Use Salt && Pepper Noise ",IDC_STATIC,126,6,114,78
+    CONTROL         "",IDC_RADIO1,"Button",BS_AUTORADIOBUTTON | WS_GROUP,12,6,8,10
+    CONTROL         "",IDC_RADIO2,"Button",BS_AUTORADIOBUTTON,132,6,8,10
+    EDITTEXT        IDC_EDIT_G_MEAN,72,30,40,14,ES_AUTOHSCROLL
+    RTEXT           "Mean :",IDC_STATIC,24,30,30,12
+    RTEXT           "Sigma :",IDC_STATIC,24,54,30,12
+    EDITTEXT        IDC_EDIT_G_SIGMA,72,54,40,14,ES_AUTOHSCROLL
+    RTEXT           "Salt % :",IDC_STATIC,144,30,30,12
+    RTEXT           "Pepper % :",IDC_STATIC,132,54,42,12
+    EDITTEXT        IDC_EDIT_SP_SALT,192,30,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_SP_PEPPER,192,54,40,14,ES_AUTOHSCROLL
+    CONTROL         "RGB",IDC_CHECK1,"Button",BS_AUTOCHECKBOX | BS_LEFTTEXT | WS_TABSTOP,198,18,32,10
+END
+
+IDD_SARPENING_FILTER DIALOGEX 0, 0, 345, 201
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Sharpening Filter"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    EDITTEXT        IDC_EDIT1,0,0,345,42,ES_CENTER | ES_MULTILINE | ES_AUTOHSCROLL | ES_READONLY | NOT WS_BORDER
+    GROUPBOX        "Highboost Filter",IDC_STATIC,12,48,150,66
+    GROUPBOX        "Laplacian Sharpening",IDC_STATIC,186,48,150,66
+    GROUPBOX        "     FILTER B",IDC_STATIC,12,120,150,66
+    GROUPBOX        "     FILTER B",IDC_STATIC,186,120,150,54
+    DEFPUSHBUTTON   "확인",IDOK,222,180,50,14
+    PUSHBUTTON      "취소",IDCANCEL,282,180,50,14
+    EDITTEXT        IDC_EDIT_SIGMA,114,66,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_WEIGHT,114,84,40,14,ES_AUTOHSCROLL
+    RTEXT           "Gaussan Sigma : ",IDC_STATIC,30,66,66,12,SS_CENTERIMAGE
+    RTEXT           "Weight : ",IDC_STATIC,24,84,72,12,SS_CENTERIMAGE
+    CONTROL         "unsharp masking filter",IDC_CHECK_UNSHARP_MASKING,
+                    "Button",BS_AUTOCHECKBOX | BS_LEFTTEXT | WS_TABSTOP,66,102,86,10
+    CONTROL         "  Laplacian4",IDC_RADIO_LAPLACIAN1,"Button",BS_AUTORADIOBUTTON | WS_GROUP,198,60,53,10
+    CONTROL         "  Laplacian8",IDC_RADIO_LAPLACIAN2,"Button",BS_AUTORADIOBUTTON,276,60,53,10
+    LTEXT           "0",IDC_STATIC,210,72,8,8
+    LTEXT           "1",IDC_STATIC,222,72,8,8
+    LTEXT           "0",IDC_STATIC,234,72,8,8
+    LTEXT           "1",IDC_STATIC,210,84,8,8
+    LTEXT           "-4   ",IDC_STATIC,219,84,8,8
+    LTEXT           "1",IDC_STATIC,234,84,8,8
+    LTEXT           "0",IDC_STATIC,210,96,8,8
+    LTEXT           "1",IDC_STATIC,222,96,8,8
+    LTEXT           "0",IDC_STATIC,234,96,8,8
+    LTEXT           "1",IDC_STATIC,288,72,8,8
+    LTEXT           "1",IDC_STATIC,300,72,8,8
+    LTEXT           "1",IDC_STATIC,312,72,8,8
+    LTEXT           "1",IDC_STATIC,288,84,8,8
+    LTEXT           "-8",IDC_STATIC,297,84,8,8
+    LTEXT           "1",IDC_STATIC,312,84,8,8
+    LTEXT           "1",IDC_STATIC,288,96,8,8
+    LTEXT           "1",IDC_STATIC,300,96,8,8
+    LTEXT           "1",IDC_STATIC,312,96,8,8
+    CONTROL         "",IDC_STATIC,"Static",SS_BLACKFRAME,203,71,42,36
+    CONTROL         "",IDC_STATIC,"Static",SS_BLACKFRAME,281,71,42,36
+END
+
+IDD_LINE_PROFILE DIALOGEX 0, 0, 293, 178
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Line Profile"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    EDITTEXT        IDC_EDIT_START_X,36,150,40,14,ES_AUTOHSCROLL | ES_READONLY | WS_DISABLED
+    RTEXT           "From : ",IDC_STATIC,6,150,30,12,SS_CENTERIMAGE
+    RTEXT           "To : ",IDC_STATIC,138,150,30,12,SS_CENTERIMAGE
+    EDITTEXT        IDC_EDIT_START_Y,84,150,40,14,ES_AUTOHSCROLL | ES_READONLY | WS_DISABLED
+    EDITTEXT        IDC_EDIT_END_X,168,150,40,14,ES_AUTOHSCROLL | ES_READONLY | WS_DISABLED
+    EDITTEXT        IDC_EDIT_END_Y,216,150,40,14,ES_AUTOHSCROLL | ES_READONLY | WS_DISABLED
+END
+
+IDD_EDGE_DIALOG DIALOGEX 0, 0, 255, 218
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Edge Detector"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    CONTROL         "Robert",IDC_RADIO_EDGE1,"Button",BS_AUTORADIOBUTTON | WS_GROUP,24,24,38,10
+    CONTROL         "Prewitt",IDC_RADIO_EDGE2,"Button",BS_AUTORADIOBUTTON,24,42,39,10
+    CONTROL         "Sobel",IDC_RADIO_EDGE3,"Button",BS_AUTORADIOBUTTON,24,60,33,10
+    CONTROL         "Laplacian 4",IDC_RADIO_EDGE4,"Button",BS_AUTORADIOBUTTON,24,78,51,12
+    CONTROL         "Laplacian 8",IDC_RADIO_EDGE5,"Button",BS_AUTORADIOBUTTON,24,96,48,12
+    CONTROL         "Canny",IDC_RADIO_EDGE6,"Button",BS_AUTORADIOBUTTON,24,150,48,12
+    CONTROL         "LoG",IDC_RADIO_EDGE7,"Button",BS_AUTORADIOBUTTON,24,114,48,12
+    CONTROL         "DoG",IDC_RADIO_EDGE8,"Button",BS_AUTORADIOBUTTON,24,132,48,12
+    DEFPUSHBUTTON   "확인",IDOK,132,198,50,14
+    CONTROL         "Normalize",IDC_CHECK_NORMALIZE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,198,0,45,16
+    PUSHBUTTON      "취소",IDCANCEL,192,198,50,14
+    GROUPBOX        "Edge Detect Type",IDC_STATIC,12,12,234,162
+    LTEXT           "Low TH :",IDC_STATIC,96,150,29,12,SS_CENTERIMAGE
+    LTEXT           "High TH :",IDC_STATIC,174,150,32,12,SS_CENTERIMAGE
+    EDITTEXT        IDC_EDIT_LOWTH,132,150,30,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_HIGHTH,210,150,30,14,ES_AUTOHSCROLL
+    LTEXT           "Sigma :",IDC_STATIC,180,114,26,12,SS_CENTERIMAGE
+    EDITTEXT        IDC_EDIT_LOG_SIGMA,210,114,30,14,ES_AUTOHSCROLL
+    LTEXT           "Sigma 1 :",IDC_STATIC,96,132,29,12,SS_CENTERIMAGE
+    LTEXT           "Sigma 2 :",IDC_STATIC,174,132,29,12,SS_CENTERIMAGE
+    EDITTEXT        IDC_EDIT_DOG_SIGMA1,132,132,30,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_DOG_SIGMA2,210,132,30,14,ES_AUTOHSCROLL
+    CONTROL         "",IDC_SLIDER1,"msctls_trackbar32",TBS_AUTOTICKS | WS_TABSTOP,12,180,108,15
+    CONTROL         "",IDC_SLIDER2,"msctls_trackbar32",TBS_AUTOTICKS | WS_TABSTOP,12,198,108,15
+END
+
+IDD_MORPHOLOGY DIALOGEX 0, 0, 309, 201
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Morphology"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    CONTROL         "Erosion",IDC_RADIO_MORPH_TYPE1,"Button",BS_AUTORADIOBUTTON | WS_GROUP,24,30,42,10
+    CONTROL         "Dilation",IDC_RADIO_MORPH_TYPE2,"Button",BS_AUTORADIOBUTTON,24,54,42,10
+    CONTROL         "Opening",IDC_RADIO_MORPH_TYPE3,"Button",BS_AUTORADIOBUTTON,24,78,42,10
+    CONTROL         "Closing",IDC_RADIO_MORPH_TYPE4,"Button",BS_AUTORADIOBUTTON,24,102,42,10
+    CONTROL         "Conditional",IDC_RADIO_MORPH_TYPE5,"Button",BS_AUTORADIOBUTTON,24,174,54,10
+    CONTROL         "Opening Residue",IDC_RADIO_MORPH_TYPE6,"Button",BS_AUTORADIOBUTTON,24,126,66,10
+    CONTROL         "Closing Residue",IDC_RADIO_MORPH_TYPE7,"Button",BS_AUTORADIOBUTTON,24,150,66,10
+    COMBOBOX        IDC_COMBO1,102,180,72,30,CBS_DROPDOWN | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    CONTROL         "Disk",IDC_RADIO_SE_TYPE1,"Button",BS_AUTORADIOBUTTON | WS_GROUP,114,30,29,10
+    CONTROL         "Ring(thickness : 1)",IDC_RADIO_SE_TYPE4,"Button",BS_AUTORADIOBUTTON,114,54,75,10
+    CONTROL         "Rectangle",IDC_RADIO_SE_TYPE2,"Button",BS_AUTORADIOBUTTON,114,78,48,10
+    CONTROL         "Frmae(thickness : 1)",IDC_RADIO_SE_TYPE5,"Button",BS_AUTORADIOBUTTON,114,102,81,10
+    CONTROL         "Cross",IDC_RADIO_SE_TYPE3,"Button",BS_AUTORADIOBUTTON,114,126,34,10
+    CONTROL         "Diamond",IDC_RADIO_SE_TYPE6,"Button",BS_AUTORADIOBUTTON,114,150,43,10
+    EDITTEXT        IDC_EDIT_DISK_RADIUS,264,30,30,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_RECT_H,216,78,30,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_RECT_W,264,78,30,14,ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "확인",IDOK,186,180,50,14
+    PUSHBUTTON      "취소",IDCANCEL,246,180,50,14
+    GROUPBOX        "Morphology Type",IDC_STATIC,12,6,84,186
+    GROUPBOX        "Structuring Element Type",IDC_STATIC,102,6,198,168
+    RTEXT           "Radius :",IDC_STATIC,234,30,30,12,SS_CENTERIMAGE
+    LTEXT           "H :",IDC_STATIC,204,78,12,12,SS_CENTERIMAGE
+    RTEXT           "W :",IDC_STATIC,252,78,12,12,SS_CENTERIMAGE
+END
+
+IDD_LOOP_DLG DIALOGEX 0, 0, 139, 137
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Loop"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "확인",IDOK,6,118,50,14
+    PUSHBUTTON      "취소",IDCANCEL,72,118,50,14
+    PUSHBUTTON      "Add",IDC_BUTTON_ADD,65,89,50,14
+    GROUPBOX        "for Loop",-1,13,4,108,106
+    LTEXT           "loop cnt",-1,29,34,26,8
+    EDITTEXT        IDC_EDIT1,63,33,40,14,ES_AUTOHSCROLL
+END
+
+IDD_MORPH_ALGORITHM DIALOGEX 0, 0, 243, 87
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Morphological Algorithm"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "확인",IDOK,120,60,50,14
+    PUSHBUTTON      "취소",IDCANCEL,180,60,50,14
+    LTEXT           "Image :",IDC_STATIC,18,24,30,8
+    COMBOBOX        IDC_COMBO1,54,24,156,30,CBS_DROPDOWNLIST | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+END
+
+IDD_FREQ_FILTER_DLG DIALOGEX 0, 0, 177, 183
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Frequency Domain Filter"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "확인",IDOK,54,156,50,14
+    PUSHBUTTON      "취소",IDCANCEL,114,156,50,14
+    CTEXT           "Filter Type :",IDC_STATIC,12,12,40,8
+    LTEXT           "Filter Shape :",IDC_STATIC,12,36,44,8
+    LTEXT           "Cut Off Frequency :",IDC_STATIC,12,60,66,8
+    LTEXT           "BPF Bandwith :",IDC_STATIC,12,84,49,8
+    LTEXT           "Butterworth Order :",IDC_STATIC,12,108,65,8
+    COMBOBOX        IDC_COMBO_FILTER_TYPE,66,12,102,30,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_COMBO_FILTER_SHAPE,66,36,102,30,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    CONTROL         "Do Scale",IDC_CHECK_SCALE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,12,132,43,10
+    CONTROL         "Add Average",IDC_CHECK_AVR,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,108,132,58,10
+    EDITTEXT        IDC_EDIT_COF_VAL,126,60,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_BPF_VAL,126,84,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_BUTTER_VAL,126,108,40,14,ES_AUTOHSCROLL
+END
+
+IDD_PATTERNMATCHING_DLG DIALOGEX 0, 0, 243, 105
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Pattern Matching"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    EDITTEXT        IDC_EDIT_OBJECT,96,36,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_NCC_TH,96,60,40,14,ES_AUTOHSCROLL
+    CONTROL         "Number of objects :",IDC_RADIO_PM_MODE1,"Button",BS_AUTORADIOBUTTON | WS_GROUP,18,36,76,10
+    CONTROL         "NCC Threshold :",IDC_RADIO_PM_MODE2,"Button",BS_AUTORADIOBUTTON,18,60,68,10
+    DEFPUSHBUTTON   "확인",IDOK,114,84,50,14
+    PUSHBUTTON      "취소",IDCANCEL,180,84,50,14
+    COMBOBOX        IDC_COMBO_PIMAGE,96,12,138,30,CBS_DROPDOWNLIST | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Pattern Image :",IDC_STATIC,18,12,52,8
+END
+
+IDD_HOUGH_LINE_DLG DIALOGEX 0, 0, 225, 218
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Hough Line Detector"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "확인",IDOK,102,198,50,14
+    PUSHBUTTON      "취소",IDCANCEL,156,198,50,14
+    GROUPBOX        "Canny Edge ",IDC_STATIC,6,6,210,60
+    LTEXT           "Low Threshold :",IDC_STATIC,24,24,52,8
+    LTEXT           "High Threshold :",IDC_STATIC,24,48,53,8
+    LTEXT           "Theta :",IDC_STATIC,24,96,24,8
+    LTEXT           "Rho :",IDC_STATIC,126,96,18,8
+    LTEXT           "Threshold :",IDC_STATIC,24,120,37,8
+    GROUPBOX        "Hough Line",IDC_STATIC,6,78,210,60
+    CONTROL         "",IDC_LOW_THRESHOLD,"msctls_trackbar32",TBS_AUTOTICKS | WS_TABSTOP,84,24,126,15
+    CONTROL         "",IDC_HIGH_THRESHOLD,"msctls_trackbar32",TBS_AUTOTICKS | WS_TABSTOP,84,48,126,15
+    CONTROL         "",IDC_HOUGH_THRESHOLD,"msctls_trackbar32",TBS_AUTOTICKS | WS_TABSTOP,84,120,126,15
+    EDITTEXT        IDC_EDIT_THETA,60,96,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_RHO,162,96,40,14,ES_AUTOHSCROLL
+    GROUPBOX        "Mask Size",IDC_STATIC,6,150,210,42
+    LTEXT           "Height :",IDC_STATIC,24,168,26,8
+    LTEXT           "Width :",IDC_STATIC,126,168,24,8
+    EDITTEXT        IDC_EDIT_HEIGHT,60,168,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_WIDTH,162,168,40,14,ES_AUTOHSCROLL
+END
+
+IDD_CONTOUR_THRESOLD DIALOGEX 0, 0, 129, 68
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Contour Threshold"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "확인",IDOK,12,48,50,14
+    PUSHBUTTON      "취소",IDCANCEL,66,48,50,14
+    EDITTEXT        IDC_EDIT_CONTOUR_TH,12,24,102,14,ES_AUTOHSCROLL
+    LTEXT           "Contour Threshold Value",IDC_STATIC,12,6,80,8
+END
+
+IDD_TRANSLATION DIALOGEX 0, 0, 153, 164
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Translation"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    EDITTEXT        IDC_EDIT1,66,12,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT2,108,12,40,14,ES_AUTOHSCROLL
+    CONTROL         "ROI 지정",IDC_CHECK1,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,12,42,45,10
+    EDITTEXT        IDC_EDIT3,66,60,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT4,108,60,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT5,66,78,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT6,108,78,40,14,ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "확인",IDOK,42,138,50,14
+    PUSHBUTTON      "취소",IDCANCEL,96,138,50,14
+    LTEXT           "Shift X, Y = ",IDC_STATIC,12,12,40,8
+    LTEXT           "Top Left X, Y =",IDC_STATIC,12,60,50,8
+    LTEXT           "Width, Height = ",IDC_STATIC,12,78,54,8
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x40004L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "041204B0"
+        BEGIN
+            VALUE "CompanyName", "TODO: <회사 이름>"
+            VALUE "FileDescription", "MyIPTool2"
+            VALUE "FileVersion", "1.0.0.1"
+            VALUE "InternalName", "MyIPTool2.exe"
+            VALUE "LegalCopyright", "TODO: (c) <회사 이름>.  All rights reserved."
+            VALUE "OriginalFilename", "MyIPTool2.exe"
+            VALUE "ProductName", "TODO: <제품 이름>"
+            VALUE "ProductVersion", "1.0.0.1"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x412, 1200
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 163
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 55
+    END
+
+    IDD_BRIGHTNESS_CONTRAST_DLG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 278
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 121
+    END
+
+    IDD_GAMMA_DLG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 278
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 73
+    END
+
+    IDD_HISTOGRAM, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 452
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 158
+    END
+
+    IDD_COLOR_COMBINE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 230
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 146
+    END
+
+    IDD_ARITHMETIC_LOGICAL, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 1022
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 235
+    END
+
+    IDD_THRESHOLD, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 326
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 152
+    END
+
+    IDD_THRESHOLD_CV, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 344
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 194
+    END
+
+    IDD_SPETIAL_FILTER, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 338
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 211
+    END
+
+    IDD_NOISE_DLG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 242
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 104
+    END
+
+    IDD_SARPENING_FILTER, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 338
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 194
+    END
+
+    IDD_LINE_PROFILE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 286
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 171
+    END
+
+    IDD_EDGE_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 248
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 211
+    END
+
+    IDD_MORPHOLOGY, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 302
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 194
+    END
+
+    IDD_LOOP_DLG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 132
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 130
+    END
+
+    IDD_MORPH_ALGORITHM, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 236
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 80
+    END
+
+    IDD_FREQ_FILTER_DLG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 170
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 176
+    END
+
+    IDD_PATTERNMATCHING_DLG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 236
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 98
+    END
+
+    IDD_HOUGH_LINE_DLG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 218
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 211
+    END
+
+    IDD_CONTOUR_THRESOLD, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 122
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 61
+    END
+
+    IDD_TRANSLATION, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 146
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 157
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// AFX_DIALOG_LAYOUT
+//
+
+IDD_BRIGHTNESS_CONTRAST_DLG AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+IDD_GAMMA_DLG AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+IDD_HISTOGRAM AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+IDD_COLOR_COMBINE AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+IDD_ARITHMETIC_LOGICAL AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+IDD_THRESHOLD AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+IDD_THRESHOLD_CV AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+IDD_SPETIAL_FILTER AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+IDD_NOISE_DLG AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+IDD_SARPENING_FILTER AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+IDD_LINE_PROFILE AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+IDD_EDGE_DIALOG AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+IDD_MORPHOLOGY AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+IDD_LOOP_DLG AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+IDD_MORPH_ALGORITHM AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+IDD_FREQ_FILTER_DLG AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+IDD_PATTERNMATCHING_DLG AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+IDD_HOUGH_LINE_DLG AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+IDD_CONTOUR_THRESOLD AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+IDD_TRANSLATION AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog Info
+//
+
+IDD_COLOR_COMBINE DLGINIT
+BEGIN
+    IDC_COMBO_IMAGE1, 0x403, 3, 0
+0xa1a4, "\000" 
+    0
+END
+
+IDD_FREQ_FILTER_DLG DLGINIT
+BEGIN
+    IDC_COMBO_FILTER_TYPE, 0x403, 16, 0
+0x6f4c, 0x2077, 0x6150, 0x7373, 0x4620, 0x6c69, 0x6574, 0x0072, 
+    IDC_COMBO_FILTER_TYPE, 0x403, 17, 0
+0x6948, 0x6867, 0x5020, 0x7361, 0x2073, 0x6946, 0x746c, 0x7265, "\000" 
+    IDC_COMBO_FILTER_TYPE, 0x403, 17, 0
+0x6142, 0x646e, 0x5020, 0x7361, 0x2073, 0x6946, 0x746c, 0x7265, "\000" 
+    IDC_COMBO_FILTER_TYPE, 0x403, 19, 0
+0x6142, 0x646e, 0x5220, 0x6a65, 0x6365, 0x2074, 0x6946, 0x746c, 0x7265, 
+"\000" 
+    IDC_COMBO_FILTER_SHAPE, 0x403, 6, 0
+0x6449, 0x6165, 0x006c, 
+    IDC_COMBO_FILTER_SHAPE, 0x403, 9, 0
+0x6147, 0x7375, 0x6973, 0x6e61, "\000" 
+    IDC_COMBO_FILTER_SHAPE, 0x403, 12, 0
+0x7542, 0x7474, 0x7265, 0x6f77, 0x7472, 0x0068, 
+    0
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE
+BEGIN
+    IDP_OLE_INIT_FAILED     "OLE를 초기화할 수 없습니다. OLE 라이브러리 버전이 올바른지 확인하십시오."
+END
+
+STRINGTABLE
+BEGIN
+    IDR_MAINFRAME           "MyIPTool2"
+    IDR_MyIPTool2TYPE       "\nMyIPTool2\nMyIPTool2\nMyIPTool2 Files (*.bmp)\n.bmp\nMyIPTool2.Document\nMyIPTool2.Document"
+    ID_WINDOW_MANAGER       "창(&W)..."
+END
+
+STRINGTABLE
+BEGIN
+    AFX_IDS_APP_TITLE       "MyIPTool2"
+    AFX_IDS_IDLEMESSAGE     "준비"
+END
+
+STRINGTABLE
+BEGIN
+    ID_INDICATOR_EXT        "EXT"
+    ID_INDICATOR_CAPS       "CAP"
+    ID_INDICATOR_NUM        "NUM"
+    ID_INDICATOR_SCRL       "SCRL"
+    ID_INDICATOR_OVR        "OVR"
+    ID_INDICATOR_REC        "REC"
+END
+
+STRINGTABLE
+BEGIN
+    ID_FILE_NEW             "새 문서를 만듭니다.\n새로 만들기"
+    ID_FILE_OPEN            "기존 문서를 엽니다.\n열기"
+    ID_FILE_CLOSE           "활성 문서를 닫습니다.\n닫기"
+    ID_FILE_SAVE            "활성 문서를 저장합니다.\n저장"
+    ID_FILE_SAVE_AS         "활성 문서를 새 이름으로 저장합니다.\n다른 이름으로 저장"
+    ID_FILE_PAGE_SETUP      "인쇄 옵션을 변경합니다.\n페이지 설정"
+    ID_FILE_PRINT_SETUP     "프린터 및 인쇄 옵션을 변경합니다.\n인쇄 설정"
+    ID_FILE_PRINT           "활성 문서를 인쇄합니다.\n인쇄"
+    ID_FILE_PRINT_DIRECT    "현재 옵션을 사용하여 활성 문서를 인쇄합니다.\n빠른 인쇄"
+    ID_FILE_PRINT_PREVIEW   "전체 페이지를 표시합니다.\n인쇄 미리 보기"
+END
+
+STRINGTABLE
+BEGIN
+    ID_APP_ABOUT            "프로그램 정보, 버전 번호 및 저작권을 표시합니다.\n정보"
+    ID_APP_EXIT             "문서를 저장할지를 묻고 응용 프로그램을 끝냅니다.\n끝내기"
+END
+
+STRINGTABLE
+BEGIN
+    ID_FILE_MRU_FILE1       "현재 문서를 엽니다."
+    ID_FILE_MRU_FILE2       "현재 문서를 엽니다."
+    ID_FILE_MRU_FILE3       "현재 문서를 엽니다."
+    ID_FILE_MRU_FILE4       "현재 문서를 엽니다."
+    ID_FILE_MRU_FILE5       "현재 문서를 엽니다."
+    ID_FILE_MRU_FILE6       "현재 문서를 엽니다."
+    ID_FILE_MRU_FILE7       "현재 문서를 엽니다."
+    ID_FILE_MRU_FILE8       "현재 문서를 엽니다."
+    ID_FILE_MRU_FILE9       "현재 문서를 엽니다."
+    ID_FILE_MRU_FILE10      "현재 문서를 엽니다."
+    ID_FILE_MRU_FILE11      "현재 문서를 엽니다."
+    ID_FILE_MRU_FILE12      "현재 문서를 엽니다."
+    ID_FILE_MRU_FILE13      "현재 문서를 엽니다."
+    ID_FILE_MRU_FILE14      "현재 문서를 엽니다."
+    ID_FILE_MRU_FILE15      "현재 문서를 엽니다."
+    ID_FILE_MRU_FILE16      "현재 문서를 엽니다."
+END
+
+STRINGTABLE
+BEGIN
+    ID_NEXT_PANE            "다음 창으로 전환합니다.\n다음 창"
+    ID_PREV_PANE            "이전 창으로 전환합니다.\n이전 창"
+END
+
+STRINGTABLE
+BEGIN
+    ID_WINDOW_NEW           "활성 문서에 대해 다른 창을 엽니다.\n새 창"
+    ID_WINDOW_ARRANGE       "창의 아래쪽에 아이콘을 정렬합니다.\n아이콘 정렬"
+    ID_WINDOW_CASCADE       "창이 겹치도록 계단식으로 정렬합니다.\n계단식 창 배열"
+    ID_WINDOW_TILE_HORZ     "창이 겹치지 않도록 바둑판식으로 정렬합니다.\n바둑판식 창 배열"
+    ID_WINDOW_TILE_VERT     "창이 겹치지 않도록 바둑판식으로 정렬합니다.\n바둑판식 창 배열"
+    ID_WINDOW_SPLIT         "활성 창을 여러 개의 창으로 분할합니다.\n분할"
+END
+
+STRINGTABLE
+BEGIN
+    ID_EDIT_CLEAR           "선택 영역을 지웁니다.\n지우기"
+    ID_EDIT_CLEAR_ALL       "모두 지웁니다.\n모두 지우기"
+    ID_EDIT_COPY            "선택 영역을 복사하여 클립보드에 넣습니다.\n복사"
+    ID_EDIT_CUT             "선택 영역을 잘라내어 클립보드에 넣습니다.\n잘라내기"
+    ID_EDIT_FIND            "지정한 텍스트를 찾습니다.\n찾기"
+    ID_EDIT_PASTE           "클립보드 내용을 삽입합니다.\n붙여넣기"
+    ID_EDIT_REPEAT          "마지막 작업을 반복합니다.\n반복"
+    ID_EDIT_REPLACE         "특정 텍스트를 다른 텍스트로 바꿉니다.\n바꾸기"
+    ID_EDIT_SELECT_ALL      "전체 문서를 선택합니다.\n모두 선택"
+    ID_EDIT_UNDO            "마지막 작업 실행을 취소합니다.\n실행 취소"
+    ID_EDIT_REDO            "이전에 실행 취소된 작업을 다시 실행합니다.\n다시 실행"
+END
+
+STRINGTABLE
+BEGIN
+    ID_VIEW_STATUS_BAR      "상태 표시줄을 표시하거나 숨깁니다.\n상태 표시줄 설정/해제"
+END
+
+STRINGTABLE
+BEGIN
+    AFX_IDS_SCSIZE          "창 크기를 변경합니다."
+    AFX_IDS_SCMOVE          "창 위치를 변경합니다."
+    AFX_IDS_SCMINIMIZE      "창을 아이콘으로 축소합니다."
+    AFX_IDS_SCMAXIMIZE      "창을 전체 화면 크기로 확대합니다."
+    AFX_IDS_SCNEXTWINDOW    "다음 문서 창으로 전환합니다."
+    AFX_IDS_SCPREVWINDOW    "이전 문서 창으로 전환합니다."
+    AFX_IDS_SCCLOSE         "문서를 저장할 것인지 확인하고 활성 창을 닫습니다."
+END
+
+STRINGTABLE
+BEGIN
+    AFX_IDS_SCRESTORE       "창을 보통 크기로 복원합니다."
+    AFX_IDS_SCTASKLIST      "작업 목록을 활성화합니다."
+    AFX_IDS_MDICHILD        "이 창을 활성화합니다."
+END
+
+STRINGTABLE
+BEGIN
+    AFX_IDS_PREVIEW_CLOSE   "인쇄 미리 보기 모드를 닫습니다.\n미리 보기 취소"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_STATUS_PANE1        "창 1"
+    IDS_STATUS_PANE2        "창 2"
+    IDS_TOOLBAR_STANDARD    "표준"
+    IDS_TOOLBAR_CUSTOMIZE   "사용자 지정..."
+END
+
+STRINGTABLE
+BEGIN
+    IDS_OUTPUT_WND          "출력"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_BUILD_TAB           "빌드"
+    IDS_DEBUG_TAB           "디버그"
+    IDS_FIND_TAB            "찾기"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_EDIT_MENU           "편집"
+END
+
+#endif    // 한국어(대한민국) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_KOR)
+LANGUAGE 18, 1
+#include "res\MyIPTool2.rc2"  // Microsoft Visual C++ 이외의 다른 도구에서 편집한 리소스입니다.
+#include "l.KOR\afxres.rc"      // 표준 구성 요소
+#include "l.KOR\afxprint.rc"    // 인쇄 미리 보기 리소스
+#if !defined(_AFXDLL)
+#include "l.KOR\afxribbon.rc"        // MFC 리본 및 컨트롤 막대 리소스
+#endif
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
