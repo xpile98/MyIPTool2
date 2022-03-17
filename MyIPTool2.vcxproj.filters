@@ -111,9 +111,6 @@
     <ClInclude Include="MyFiles\ShapeElement.h">
       <Filter>MyFiles</Filter>
     </ClInclude>
-    <ClInclude Include="Logger.h">
-      <Filter>Main</Filter>
-    </ClInclude>
     <ClInclude Include="MyCSVFile.h">
       <Filter>MyFiles</Filter>
     </ClInclude>
@@ -144,12 +141,17 @@
     <ClInclude Include="HoughLineDlg.h">
       <Filter>Dialog</Filter>
     </ClInclude>
-    <ClInclude Include="MyIPGeometry.h" />
     <ClInclude Include="TranslationDlg.h">
       <Filter>Dialog</Filter>
     </ClInclude>
     <ClInclude Include="ContourThresoldDlg.h">
       <Filter>Dialog</Filter>
+    </ClInclude>
+    <ClInclude Include="MyIPGeometry.h">
+      <Filter>MyFiles</Filter>
+    </ClInclude>
+    <ClInclude Include="Logger.h">
+      <Filter>Main</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -240,9 +242,6 @@
     <ClCompile Include="MyFiles\ShapeElement.cpp">
       <Filter>MyFiles</Filter>
     </ClCompile>
-    <ClCompile Include="Logger.cpp">
-      <Filter>Main</Filter>
-    </ClCompile>
     <ClCompile Include="MyCSVFile.cpp">
       <Filter>MyFiles</Filter>
     </ClCompile>
@@ -273,14 +272,17 @@
     <ClCompile Include="HoughLineDlg.cpp">
       <Filter>Dialog</Filter>
     </ClCompile>
-    <ClCompile Include="MyIPGeometry.cpp">
-      <Filter>Main</Filter>
-    </ClCompile>
     <ClCompile Include="TranslationDlg.cpp">
       <Filter>Dialog</Filter>
     </ClCompile>
     <ClCompile Include="ContourThresoldDlg.cpp">
       <Filter>Dialog</Filter>
+    </ClCompile>
+    <ClCompile Include="MyIPGeometry.cpp">
+      <Filter>MyFiles</Filter>
+    </ClCompile>
+    <ClCompile Include="Logger.cpp">
+      <Filter>Main</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
