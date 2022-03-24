@@ -137,7 +137,7 @@ CMyIPTool2Doc::CMyIPTool2Doc()
 	// TODO: 여기에 일회성 생성 코드를 추가합니다.
 	m_Title = _T("");
 	srand((unsigned)(time(NULL)));		//srand 인수를 시간으로 준다.
-	m_fZoom = 1.0;
+	m_dZoom = 1.0;
 }
 
 CMyIPTool2Doc::~CMyIPTool2Doc()
@@ -2651,7 +2651,7 @@ void CMyIPTool2Doc::OnUserfeaturePeriodictranslation()
 void CMyIPTool2Doc::OnZoomX1()
 {
 	// TODO: 여기에 명령 처리기 코드를 추가합니다.
-	m_fZoom = 1;
+	m_dZoom = 1;
 	POSITION pos = GetFirstViewPosition();
 	CMyIPTool2View *pView = (CMyIPTool2View*)GetNextView(pos); 
 	pView->SetScrollSizeToFit();
@@ -2662,7 +2662,7 @@ void CMyIPTool2Doc::OnZoomX1()
 void CMyIPTool2Doc::OnZoomX2()
 {
 	// TODO: 여기에 명령 처리기 코드를 추가합니다.
-	m_fZoom = 2;
+	m_dZoom = 2;
 	POSITION pos = GetFirstViewPosition();
 	CMyIPTool2View *pView = (CMyIPTool2View*)GetNextView(pos);
 	pView->SetScrollSizeToFit();
@@ -2673,7 +2673,7 @@ void CMyIPTool2Doc::OnZoomX2()
 void CMyIPTool2Doc::OnZoomX3()
 {
 	// TODO: 여기에 명령 처리기 코드를 추가합니다.
-	m_fZoom = 3;
+	m_dZoom = 3;
 	POSITION pos = GetFirstViewPosition();
 	CMyIPTool2View *pView = (CMyIPTool2View*)GetNextView(pos);
 	pView->SetScrollSizeToFit();
@@ -2684,7 +2684,7 @@ void CMyIPTool2Doc::OnZoomX3()
 void CMyIPTool2Doc::OnZoomX4()
 {
 	// TODO: 여기에 명령 처리기 코드를 추가합니다.
-	m_fZoom = 4;
+	m_dZoom = 4;
 	POSITION pos = GetFirstViewPosition();
 	CMyIPTool2View *pView = (CMyIPTool2View*)GetNextView(pos);
 	pView->SetScrollSizeToFit();

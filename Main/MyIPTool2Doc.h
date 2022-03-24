@@ -20,7 +20,7 @@ public:
 	MyIPImage m_MyIPImage;
 	MyIPImage m_MyIPImage_org;
 	CString m_Title;
-	float m_fZoom;
+	double m_dZoom;
 
 // 작업입니다.
 public:

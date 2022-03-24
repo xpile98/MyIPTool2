@@ -115,12 +115,7 @@ void CMyIPTool2View::OnDraw(CDC* pDC)
 		pDC->SelectObject(&red_pen);
 		CPoint asd = GetScrollPosition();
 		// юс╩Г m_roi += GetScrollPosition();
-		CRect m_roi_zoom = m_roi;
-		m_roi_zoom.left *= pDoc->m_dZoom;
-		m_roi_zoom.right *= pDoc->m_dZoom;
-		m_roi_zoom.top *= pDoc->m_dZoom;
-		m_roi_zoom.bottom *= pDoc->m_dZoom;
-		pDC->Rectangle(m_roi_zoom);
+		pDC->Rectangle(m_roi);
 		red_pen.DeleteObject();
 	}
 

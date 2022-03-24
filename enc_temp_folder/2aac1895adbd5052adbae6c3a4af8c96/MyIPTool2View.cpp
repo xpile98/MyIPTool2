@@ -83,8 +83,8 @@ void CMyIPTool2View::OnDraw(CDC* pDC)
 	if (pDoc->m_MyIPImage.GetPixels()) {
 		int w = pDoc->m_MyIPImage.GetWidth();
 		int h = pDoc->m_MyIPImage.GetHeight();
-		//pDoc->m_MyIPImage.Draw(pDC->m_hDC, 0, 0, w*pDoc->m_fZoom, h*pDoc->m_fZoom);
-		pDoc->m_MyIPImage.Draw(pDC->m_hDC, 0, 0, w*pDoc->m_fZoom, h*pDoc->m_fZoom, 0, 0, w, h);
+		//pDoc->m_MyIPImage.Draw(pDC->m_hDC, 0, 0, w*pDoc->m_dZoom, h*pDoc->m_dZoom);
+		pDoc->m_MyIPImage.Draw(pDC->m_hDC, 0, 0, w*pDoc->m_dZoom, h*pDoc->m_dZoom, 0, 0, w, h);
 	}
 #else
 	MyIPImage img;
@@ -102,7 +102,7 @@ void CMyIPTool2View::OnDraw(CDC* pDC)
 		pDC->SelectStockObject(DC_PEN);
 		pDC->SelectObject(&red_pen);
 		pDC->MoveTo(m_Start);
-		pDC->LineTo(m_Start);
+		pDC->LineTo(m_Start);	
 		pDC->LineTo(m_End);
 		red_pen.DeleteObject();
 	}
@@ -115,6 +115,9 @@ void CMyIPTool2View::OnDraw(CDC* pDC)
 		pDC->SelectObject(&red_pen);
 		CPoint asd = GetScrollPosition();
 		// 임사 m_roi += GetScrollPosition();
+		CRect m_roi_zoom = m_roi;
+		m_roi_zoom.right *= pDoc->m_dZoom;
+		m_roi_zoom.bottom *= pDoc->m_dZoom;
 		pDC->Rectangle(m_roi);
 		red_pen.DeleteObject();
 	}
@@ -236,11 +239,11 @@ void CMyIPTool2View::OnMouseMove(UINT nFlags, CPoint point)
 	RGBBYTE** prgb_Pixel = (RGBBYTE**)pDoc->m_MyIPImage.GetPixels();
 	RGBWORD** prgbw_Pixel = (RGBWORD**)pDoc->m_MyIPImage.GetPixels();
 	
-	int x = pt.x;
-	int y = pt.y;
+	int x = (int)((double)pt.x / pDoc->m_dZoom);
+	int y = (int)((double)pt.y / pDoc->m_dZoom);
 
 	CString message;
-	if (pt.x >= 0 && pt.y >= 0 && pt.x < w && pt.y < h) {
+	if (x >= 0 && y >= 0 && x < w && y < h) {
 		switch (channel) {
 		case 1:
 			if (depth == CV_8U)
@@ -269,10 +272,24 @@ void CMyIPTool2View::OnMouseMove(UINT nFlags, CPoint point)
 	}
 
 
-	//GetROI
-	if (m_bGetROI && m_bGetROIStart) {
-		m_roi.right = pt.x;
-		m_roi.bottom = pt.y;
+		//GetROI
+	if (x >= 0 && y >= 0 && x < w && y < h) {
+		if (m_bGetROI && m_bGetROIStart) {
+// 			m_roi.right = pt.x;
+// 			m_roi.bottom = pt.y;
+			m_roi.right = (int)((double)pt.x / pDoc->m_dZoom);
+			m_roi.bottom = (int)((double)pt.y / pDoc->m_dZoom);
+			Invalidate(FALSE);
+		}
+	}
+	if (x >= w)
+	{
+		m_roi.right = w;
+		Invalidate(FALSE);
+	}
+	if(y >= h)
+	{
+		m_roi.bottom = h;
 		Invalidate(FALSE);
 	}
 
@@ -316,6 +333,7 @@ void CMyIPTool2View::OnGetroi()
 void CMyIPTool2View::OnLButtonDown(UINT nFlags, CPoint point)
 {
 	// TODO: 여기에 메시지 처리기 코드를 추가 및/또는 기본값을 호출합니다.
+	CMyIPTool2Doc* pDoc = GetDocument();
 	CPoint pt = point + GetScrollPosition();
 	if (m_bLineProfile) {
 		m_bLineProfileStart = true;
@@ -327,8 +345,10 @@ void CMyIPTool2View::OnLButtonDown(UINT nFlags, CPoint point)
 	if (m_bGetROI) {		//GetROI모드일때만 실행 
 
 		m_bGetROIStart = true;
-		m_roi.left = pt.x;
-		m_roi.top = pt.y;
+//  		m_roi.left = pt.x;
+//  		m_roi.top = pt.y;
+		m_roi.left = (int)((double)pt.x / pDoc->m_dZoom);
+		m_roi.top = (int)((double)pt.y / pDoc->m_dZoom);
 	}
 	CScrollView::OnLButtonDown(nFlags, point);
 }
@@ -361,6 +381,10 @@ void CMyIPTool2View::OnLButtonUp(UINT nFlags, CPoint point)
 		}
 
 		CMyIPTool2Doc *pDoc = GetDocument();
+		//20220324 YWCho : Zoom 을 고려한 ROI 설정
+// 		rect.right = (int)((double)rect.right * pDoc->m_dZoom);
+// 		rect.bottom = (int)((double)rect.bottom * pDoc->m_dZoom);
+
 
 		MyIPImage img;
 		CString title;
@@ -390,8 +414,8 @@ void CMyIPTool2View::SetScrollSizeToFit()
 #ifdef USE_IPIMAGE
 	if (pDoc->m_MyIPImage.GetPixels())
 	{
-		sizeTotal.cx = pDoc->m_MyIPImage.GetWidth() * pDoc->m_fZoom;
-		sizeTotal.cy = pDoc->m_MyIPImage.GetHeight() * pDoc->m_fZoom;
+		sizeTotal.cx = pDoc->m_MyIPImage.GetWidth() * pDoc->m_dZoom;
+		sizeTotal.cy = pDoc->m_MyIPImage.GetHeight() * pDoc->m_dZoom;
 	}
 #else
 	if (pDoc->m_Mat.data)	//갖고있는영상이정상이면
@@ -432,99 +456,33 @@ BOOL CMyIPTool2View::OnMouseWheel(UINT nFlags, short zDelta, CPoint pt)
 {
 	// TODO: 여기에 메시지 처리기 코드를 추가 및/또는 기본값을 호출합니다.
 	
+	CMyIPTool2Doc *pDoc = GetDocument();
 	POINT ptClient;
 	ptClient.x = pt.x;
 	ptClient.y = pt.y;
 	ScreenToClient(&ptClient);
-	/*
-	CMyIPTool2Doc *pDoc = GetDocument();
-	MyIPImage img = pDoc->m_MyIPImage;
-	MyIPImage img_zoom = pDoc->m_MyIPImage;
 
-	double zoom_scale = 1.2;
-	double new_width, new_height;
+	int w = pDoc->m_MyIPImage.GetWidth();
+	int h = pDoc->m_MyIPImage.GetHeight();
+
+	double dScaleX = (double)ptClient.x / (double)w * pDoc->m_dZoom;
+	double dScaleY = (double)ptClient.y / (double)h * pDoc->m_dZoom;
+
 	if (zDelta > 0)
 	{
-		new_width = img_zoom.GetWidth() / zoom_scale;
-		new_height = img_zoom.GetHeight() / zoom_scale;
+		pDoc->m_dZoom *= 1.2;
 	}
 	else
 	{
-		new_width = img_zoom.GetWidth()*zoom_scale;
-		new_height = img_zoom.GetHeight()*zoom_scale;
+		pDoc->m_dZoom /= 1.2;
+		if (pDoc->m_dZoom < 1)
+			pDoc->m_dZoom = 1.0;
 	}
-
-	if (new_width > img.GetWidth() || new_height > img.GetHeight())
-	{
-		new_width = img.GetWidth();
-		new_height = img.GetHeight();
-	}
-
-	if (new_width < 10 && new_height < 10)
-	{
-		return CWnd::OnMouseWheel(nFlags, zDelta, pt);
-	}
-
-	double new_center_x = new_width/2;
-	double new_center_y = new_height/2;
-
-	MyIPImage img_zoom_new, img_zoom_new2;
-	img_zoom_new.CreateImage(new_height, new_width, img.GetDepth(), img.GetChannels());
-	
-	CRect roi;
- 	roi.left = new_center_x - new_width / 2;
- 	roi.right = new_center_x + new_width / 2;
- 	roi.top = new_center_y - new_height / 2;
- 	roi.bottom = new_center_y + new_height / 2;
-
- 	if (roi.left < 0)
- 	{
-		roi.right = roi.Width();
- 		roi.left = 0;
- 	}
- 
- 	if (roi.top < 0)
- 	{
-		roi.bottom = roi.Height();
-		roi.top = 0;
- 	}
- 
- 	if (roi.right >= img.GetWidth())
- 	{
-		roi.right = img.GetWidth();
- 	}
- 
- 	if (roi.bottom >= img.GetHeight())
- 	{
-		roi.bottom = img.GetHeight();
- 	}
-
-	img_zoom_new.GetROI(img, roi);
-	pDoc->m_MyIPImage_org.Copy(img_zoom_new);
-
-	
-	//test1
-	//AfxNewImage(img_zoom_new);
-
-	//try2
-	//CClientDC dc(this);	//내가 view줄게 dc가져왕!	view의 dc(그림그리는 툴)을 가져오자 
-	// 	img_zoom_new.Draw(dc.m_hDC, 0, 0);
-	// 	UpdateData(FALSE);
-
-	
-	*/
-
-	CMyIPTool2Doc *pDoc = GetDocument();
-	if (zDelta > 0)
-	{
-		pDoc->m_fZoom *= 1.2;
-	}
-	else
-	{
-		pDoc->m_fZoom /= 1.2;
-		if (pDoc->m_fZoom < 1)
-			pDoc->m_fZoom = 1.0;
-	}
+	 
+	int w_new = pDoc->m_MyIPImage.GetWidth();
+	int h_new = pDoc->m_MyIPImage.GetHeight();
+	int w_scaled = (double)w_new * dScaleX;
+	int h_scaled = (double)h_new * dScaleY;
 	SetScrollSizeToFit();
 	Invalidate(TRUE);
 
