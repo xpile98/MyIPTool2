@@ -436,6 +436,83 @@ BOOL CMyIPTool2View::OnMouseWheel(UINT nFlags, short zDelta, CPoint pt)
 	ptClient.x = pt.x;
 	ptClient.y = pt.y;
 	ScreenToClient(&ptClient);
+	/*
+	CMyIPTool2Doc *pDoc = GetDocument();
+	MyIPImage img = pDoc->m_MyIPImage;
+	MyIPImage img_zoom = pDoc->m_MyIPImage;
+
+	double zoom_scale = 1.2;
+	double new_width, new_height;
+	if (zDelta > 0)
+	{
+		new_width = img_zoom.GetWidth() / zoom_scale;
+		new_height = img_zoom.GetHeight() / zoom_scale;
+	}
+	else
+	{
+		new_width = img_zoom.GetWidth()*zoom_scale;
+		new_height = img_zoom.GetHeight()*zoom_scale;
+	}
+
+	if (new_width > img.GetWidth() || new_height > img.GetHeight())
+	{
+		new_width = img.GetWidth();
+		new_height = img.GetHeight();
+	}
+
+	if (new_width < 10 && new_height < 10)
+	{
+		return CWnd::OnMouseWheel(nFlags, zDelta, pt);
+	}
+
+	double new_center_x = new_width/2;
+	double new_center_y = new_height/2;
+
+	MyIPImage img_zoom_new, img_zoom_new2;
+	img_zoom_new.CreateImage(new_height, new_width, img.GetDepth(), img.GetChannels());
+	
+	CRect roi;
+ 	roi.left = new_center_x - new_width / 2;
+ 	roi.right = new_center_x + new_width / 2;
+ 	roi.top = new_center_y - new_height / 2;
+ 	roi.bottom = new_center_y + new_height / 2;
+
+ 	if (roi.left < 0)
+ 	{
+		roi.right = roi.Width();
+ 		roi.left = 0;
+ 	}
+ 
+ 	if (roi.top < 0)
+ 	{
+		roi.bottom = roi.Height();
+		roi.top = 0;
+ 	}
+ 
+ 	if (roi.right >= img.GetWidth())
+ 	{
+		roi.right = img.GetWidth();
+ 	}
+ 
+ 	if (roi.bottom >= img.GetHeight())
+ 	{
+		roi.bottom = img.GetHeight();
+ 	}
+
+	img_zoom_new.GetROI(img, roi);
+	pDoc->m_MyIPImage_org.Copy(img_zoom_new);
+
+	
+	//test1
+	//AfxNewImage(img_zoom_new);
+
+	//try2
+	//CClientDC dc(this);	//내가 view줄게 dc가져왕!	view의 dc(그림그리는 툴)을 가져오자 
+	// 	img_zoom_new.Draw(dc.m_hDC, 0, 0);
+	// 	UpdateData(FALSE);
+
+	
+	*/
 
 	CMyIPTool2Doc *pDoc = GetDocument();
 	if (zDelta > 0)

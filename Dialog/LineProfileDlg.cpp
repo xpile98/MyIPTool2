@@ -61,32 +61,34 @@ void CLineProfileDlg::OnPaint()
 	dc.LineTo(420, 220);
 	dc.LineTo(420, 20);
 	dc.LineTo(20, 20);
-	/*
+
 	//각 그레이스케일에 해당하는 히스토그램 출력
-	dc.SetDCPenColor(RGB(0, 0, 0));
-	for (int i = 0; i < 256; i++) {
+	/*dc.SetDCPenColor(RGB(0, 0, 0));
+	for (int i = 0; i < 256; i++) 
+	{
 		// 		dc.MoveTo(20 + i, 120);
 		// 		dc.LineTo(20 + i, 120 - m_Histogram[i]);
 		dc.Rectangle(20 + (i * 2), 220, 22 + (i * 2), 220 - m_Histogram[i]);
 	}
 
 	//그레이스케일 레벨 출력
-	for (int i = 0; i < 256; i++) {
+	for (int i = 0; i < 256; i++) 
+	{
 		dc.SetDCPenColor(RGB(i, i, i));
 		// 		dc.MoveTo(20 + i, 130);
 		// 		dc.LineTo(20 + i, 145);
 		dc.Rectangle(20 + (i * 2), 230, 22 + (i * 2), 245);
 	}
-
+	*/
 	dc.SelectObject(pOldPen);
 
-	CString strPoint;
-	dc.SetBkColor(RGB(240, 240, 240));
-	strPoint.Format(L"평균:         %.3f", m_dMean);
-	dc.TextOut(540, 30, strPoint);
-	strPoint.Format(L"표준편차: %.3f", m_dStdDest);
-	dc.TextOut(540, 50, strPoint);
-	*/
+// 	CString strPoint;
+// 	dc.SetBkColor(RGB(240, 240, 240));
+// 	strPoint.Format(L"평균:         %.3f", m_dMean);
+// 	dc.TextOut(540, 30, strPoint);
+// 	strPoint.Format(L"표준편차: %.3f", m_dStdDest);
+// 	dc.TextOut(540, 50, strPoint);
+	
 }
 
 

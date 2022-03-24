@@ -18,7 +18,9 @@ public:
 	CHistogramDlg *m_pHistogramDlg; 
 	Mat m_Mat;
 	MyIPImage m_MyIPImage;
+	MyIPImage m_MyIPImage_org;
 	CString m_Title;
+	float m_fZoom;
 
 // 작업입니다.
 public:
@@ -136,4 +138,8 @@ public:
 	afx_msg void OnContourtracingSingleobject();
 	afx_msg void OnGeometrictransformationsTranslation();
 	afx_msg void OnUserfeaturePeriodictranslation();
+	afx_msg void OnZoomX1();
+	afx_msg void OnZoomX2();
+	afx_msg void OnZoomX3();
+	afx_msg void OnZoomX4();
 };

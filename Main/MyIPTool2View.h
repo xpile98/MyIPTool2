@@ -64,7 +64,10 @@ public:
 	bool m_bGetROIStart;
 	CRect m_roi;
 
+	//Zoom 
+	void SetScrollSizeToFit();
 	afx_msg void OnUpdateGetroi(CCmdUI *pCmdUI);
+	afx_msg BOOL OnMouseWheel(UINT nFlags, short zDelta, CPoint pt);
 };
 
 #ifndef _DEBUG  // MyIPTool2View.cpp의 디버그 버전

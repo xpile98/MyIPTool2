@@ -52,6 +52,8 @@ public:				//아무데서나 사용 가능
 	bool Load(LPCTSTR lpszPathName);
 	bool Copy(const MyIPImage &img);
 	bool Draw(HDC hDestDC, int xDest, int yDest);
+	bool Draw(HDC hDestDC, int xDest, int yDest, int nDestWidth, int nDestHeight, DWORD dwRop = SRCCOPY);
+	bool Draw(HDC hDestDC, int xDest, int yDest, int nDestWidth, int nDestHeight, int xSrc, int ySrc, int nSrcWidth, int nSrcHeight);
 	bool GetROI(MyIPImage &img, CRect rect);
 };
 

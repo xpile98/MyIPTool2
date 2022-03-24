@@ -73,9 +73,13 @@ END
 // Icon with lowest ID value placed first to ensure application icon
 // remains consistent on all systems.
 IDR_MAINFRAME           ICON                    "res\\MyIPTool2.ico"
+
 IDR_MyIPTool2TYPE       ICON                    "res\\MyIPTool2Doc.ico"
+
 IDI_OUTPUT_WND          ICON                    "res\\output_wnd.ico"
+
 IDI_OUTPUT_WND_HC       ICON                    "res\\output_wnd_hc.ico"
+
 
 /////////////////////////////////////////////////////////////////////////////
 //
@@ -83,7 +87,9 @@ IDI_OUTPUT_WND_HC       ICON                    "res\\output_wnd_hc.ico"
 //
 
 IDR_MAINFRAME           BITMAP                  "res\\Toolbar.bmp"
+
 IDR_MAINFRAME_256       BITMAP                  "res\\Toolbar256.bmp"
+
 
 /////////////////////////////////////////////////////////////////////////////
 //
@@ -237,6 +243,13 @@ BEGIN
         MENUITEM "비트 평면 분할",                    ID_BITPLANE
         MENUITEM "Threshold",                   ID_THRESHOLD
         MENUITEM "Convert 16bit",               ID_32904
+        POPUP "Zoom"
+        BEGIN
+            MENUITEM "x1",                          ID_ZOOM_X1
+            MENUITEM "x2",                          ID_ZOOM_X2
+            MENUITEM "x3",                          ID_ZOOM_X3
+            MENUITEM "x4",                          ID_ZOOM_X4
+        END
     END
     POPUP "영상개선"
     BEGIN

@@ -328,6 +328,11 @@
 #define ID_32931                        32931
 #define ID_GEOMETRICTRANSFORMATIONS_TRANSLATION 32932
 #define ID_USERFEATURE_PERIODICTRANSLATION 32933
+#define ID_32934                        32934
+#define ID_ZOOM_X1                      32935
+#define ID_ZOOM_X2                      32936
+#define ID_ZOOM_X3                      32937
+#define ID_ZOOM_X4                      32938
 #define IDD_BRIGHTNESS_CONTRAST_DLG     57632
 
 // Next default values for new objects
@@ -335,7 +340,7 @@
 #ifdef APSTUDIO_INVOKED
 #ifndef APSTUDIO_READONLY_SYMBOLS
 #define _APS_NEXT_RESOURCE_VALUE        349
-#define _APS_NEXT_COMMAND_VALUE         32934
+#define _APS_NEXT_COMMAND_VALUE         32939
 #define _APS_NEXT_CONTROL_VALUE         1124
 #define _APS_NEXT_SYMED_VALUE           310
 #endif

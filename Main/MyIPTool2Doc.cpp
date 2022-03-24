@@ -123,6 +123,10 @@ BEGIN_MESSAGE_MAP(CMyIPTool2Doc, CDocument)
 	ON_COMMAND(ID_CONTOURTRACING_SINGLEOBJECT, &CMyIPTool2Doc::OnContourtracingSingleobject)
 	ON_COMMAND(ID_GEOMETRICTRANSFORMATIONS_TRANSLATION, &CMyIPTool2Doc::OnGeometrictransformationsTranslation)
 	ON_COMMAND(ID_USERFEATURE_PERIODICTRANSLATION, &CMyIPTool2Doc::OnUserfeaturePeriodictranslation)
+	ON_COMMAND(ID_ZOOM_X1, &CMyIPTool2Doc::OnZoomX1)
+	ON_COMMAND(ID_ZOOM_X2, &CMyIPTool2Doc::OnZoomX2)
+	ON_COMMAND(ID_ZOOM_X3, &CMyIPTool2Doc::OnZoomX3)
+	ON_COMMAND(ID_ZOOM_X4, &CMyIPTool2Doc::OnZoomX4)
 END_MESSAGE_MAP()
 
 
@@ -133,6 +137,7 @@ CMyIPTool2Doc::CMyIPTool2Doc()
 	// TODO: 여기에 일회성 생성 코드를 추가합니다.
 	m_Title = _T("");
 	srand((unsigned)(time(NULL)));		//srand 인수를 시간으로 준다.
+	m_fZoom = 1.0;
 }
 
 CMyIPTool2Doc::~CMyIPTool2Doc()
@@ -2640,4 +2645,48 @@ void CMyIPTool2Doc::OnUserfeaturePeriodictranslation()
 			TIMECHECK_END
 		}
 	}
+}
+
+
+void CMyIPTool2Doc::OnZoomX1()
+{
+	// TODO: 여기에 명령 처리기 코드를 추가합니다.
+	m_fZoom = 1;
+	POSITION pos = GetFirstViewPosition();
+	CMyIPTool2View *pView = (CMyIPTool2View*)GetNextView(pos); 
+	pView->SetScrollSizeToFit();
+	pView->Invalidate(TRUE);
+}
+
+
+void CMyIPTool2Doc::OnZoomX2()
+{
+	// TODO: 여기에 명령 처리기 코드를 추가합니다.
+	m_fZoom = 2;
+	POSITION pos = GetFirstViewPosition();
+	CMyIPTool2View *pView = (CMyIPTool2View*)GetNextView(pos);
+	pView->SetScrollSizeToFit();
+	pView->Invalidate(TRUE);
+}
+
+
+void CMyIPTool2Doc::OnZoomX3()
+{
+	// TODO: 여기에 명령 처리기 코드를 추가합니다.
+	m_fZoom = 3;
+	POSITION pos = GetFirstViewPosition();
+	CMyIPTool2View *pView = (CMyIPTool2View*)GetNextView(pos);
+	pView->SetScrollSizeToFit();
+	pView->Invalidate(TRUE);
+}
+
+
+void CMyIPTool2Doc::OnZoomX4()
+{
+	// TODO: 여기에 명령 처리기 코드를 추가합니다.
+	m_fZoom = 4;
+	POSITION pos = GetFirstViewPosition();
+	CMyIPTool2View *pView = (CMyIPTool2View*)GetNextView(pos);
+	pView->SetScrollSizeToFit();
+	pView->Invalidate(TRUE);
 }

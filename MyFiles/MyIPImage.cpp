@@ -272,6 +272,68 @@ bool MyIPImage::Draw(HDC hDestDC, int xDest, int yDest)
 	return true;
 }
 
+bool MyIPImage::Draw(HDC hDestDC, int xDest, int yDest, int nDestWidth, int nDestHeight, DWORD dwRop)
+{
+	BOOL bRet;
+	if ((m_nDepth == CV_8U) && ((m_nChannels == 1) || (m_nChannels == 3))) {
+		bRet = CImage::Draw(hDestDC, 0, 0, nDestWidth, nDestHeight);
+		if (bRet == TRUE)
+			return true;
+		else
+			return false;
+	}
+
+	else if ((m_nDepth == CV_16U) && (m_nChannels == 1)) {
+		//16bit 를 8bit영상으로 만들어 Draw한다.
+		int width = GetWidth();
+		int height = GetHeight();
+		MyIPImage img;
+		if (!img.CreateImage(height, width, CV_8U, 1))	return false;
+
+		byte **bPixels = (byte**)img.GetPixels();					//새로 만든거니까 getpixels
+		unsigned short **usPixels = (unsigned short**)m_pPixels;	//My클래스 안에서 쓰니까 m_pPixels
+		for (int y = 0; y < height; y++) {
+			for (int x = 0; x < width; x++) {
+				bPixels[y][x] = (byte)(usPixels[y][x] / (unsigned short)256);
+				//bPixels[y][x] = usPixels[y][x] << 8;
+			}
+		}
+		return img.Draw(hDestDC, xDest, yDest);
+	}
+	return true;
+}
+
+bool MyIPImage::Draw(HDC hDestDC, int xDest, int yDest, int nDestWidth, int nDestHeight, int xSrc, int ySrc, int nSrcWidth, int nSrcHeight)
+{
+	BOOL bRet;
+	if ((m_nDepth == CV_8U) && ((m_nChannels == 1) || (m_nChannels == 3))) {
+		bRet = CImage::Draw(hDestDC, xDest, yDest, nDestWidth, nDestHeight, xSrc, ySrc, nSrcWidth, nSrcHeight);
+		if (bRet == TRUE)
+			return true;
+		else
+			return false;
+	}
+
+	else if ((m_nDepth == CV_16U) && (m_nChannels == 1)) {
+		//16bit 를 8bit영상으로 만들어 Draw한다.
+		int width = GetWidth();
+		int height = GetHeight();
+		MyIPImage img;
+		if (!img.CreateImage(height, width, CV_8U, 1))	return false;
+
+		byte **bPixels = (byte**)img.GetPixels();					//새로 만든거니까 getpixels
+		unsigned short **usPixels = (unsigned short**)m_pPixels;	//My클래스 안에서 쓰니까 m_pPixels
+		for (int y = 0; y < height; y++) {
+			for (int x = 0; x < width; x++) {
+				bPixels[y][x] = (byte)(usPixels[y][x] / (unsigned short)256);
+				//bPixels[y][x] = usPixels[y][x] << 8;
+			}
+		}
+		return img.Draw(hDestDC, xDest, yDest);
+	}
+	return true;
+}
+
 bool MyIPImage::GetROI(MyIPImage & img, CRect rect)
 {
 	if (!img.GetPixels()) {				//쪼다 2		img2=img, img는 선언만 된 상태고 정의 안됨.
